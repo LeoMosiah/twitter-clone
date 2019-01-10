@@ -11,7 +11,7 @@ export const getUserAction = (user) => ({
   user
 });
 
-export const updateUser = (user) => ({
+export const updateUserAction = (user) => ({
   type: UPDATE_USER,
   user
 });
