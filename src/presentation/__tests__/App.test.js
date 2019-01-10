@@ -3,6 +3,7 @@ import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import { App } from "../App";
 import React from "react";
+import { Router } from "../Router";
 
 const { store } = initializeDomainLayer();
 
@@ -23,5 +24,9 @@ describe("<App />", () => {
 
   it("renders without crashing", () => {
     expect(wrapper).toExist();
+  });
+
+  it("renders the <Router />", () => {
+    expect(wrapper.find(Router)).toExist();
   });
 });

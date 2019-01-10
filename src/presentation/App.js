@@ -1,22 +1,7 @@
-import React from 'react';
-import './App.css';
-import { connect } from 'react-redux';
-import { userSelector } from '../domain/redux/ducks/userReducer';
-import { tweetsSelector } from '../domain/redux/ducks/tweetsReducer';
+import React from "react";
+import "./App.css";
+import { Router } from "./Router";
 
-function AppContainer({user, tweets}) {
-  return (
-    <div>
-      Começo
-    </div>
-  );
-}
+export const App = () => <Router />;
 
-const mapStateToProps = state => ({
-  user: userSelector(state),
-  tweets: tweetsSelector(state)
-});
-
-export const App = connect(
-  mapStateToProps
-)(AppContainer);
+App.displayName = "App";
