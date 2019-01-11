@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-export const TweetComponent = () => (
+export const TweetComponent = ({ title }) => (
   <div>
-    Tweet
+    <h1>{title}</h1>
   </div>
 );

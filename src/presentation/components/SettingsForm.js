@@ -1,5 +1,5 @@
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import React from "react";
+import TextField from "@material-ui/core/TextField";
 
 export const SettingFormComponent = ({
   username,
@@ -14,35 +14,35 @@ export const SettingFormComponent = ({
     <TextField
       label="Username"
       value={username}
-      onChange={handleChange(value)}
+      onChange={event => handleChange(event.target.value)}
       margin="normal"
       variant="outlined"
     />
     <TextField
       label="Bio"
       value={bio}
-      onChange={handleChange(value)}
+      onChange={event => handleChange(event.target.value)}
       margin="normal"
       variant="outlined"
     />
     <TextField
       label="Location"
       value={location}
-      onChange={handleChange(value)}
+      onChange={event => handleChange(event.target.value)}
       margin="normal"
       variant="outlined"
     />
     <TextField
       label="Website"
       value={website}
-      onChange={handleChange(value)}
+      onChange={event => handleChange(event.target.value)}
       margin="normal"
       variant="outlined"
     />
     <TextField
       label="Birthday"
       value={birthday}
-      onChange={handleChange(value)}
+      onChange={event => handleChange(event.target.value)}
       margin="normal"
       variant="outlined"
     />
