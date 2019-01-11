@@ -3,7 +3,7 @@ import {
   receiveTweetsAction,
   removeTweetAction,
   tweetsReducer,
-  updateTweetACtion
+  updateTweetAction
 } from '../tweetsReducer';
 
 describe('Tweets Reducer', function () {
@@ -177,7 +177,7 @@ describe('Tweets Reducer', function () {
       }
     };
 
-    expect(tweetsReducer(initialState,updateTweetACtion(tweetUpdated))).toEqual(expectedState)
+    expect(tweetsReducer(initialState,updateTweetAction(tweetUpdated))).toEqual(expectedState)
 
   });
 

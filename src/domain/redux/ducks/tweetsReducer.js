@@ -23,7 +23,7 @@ export const removeTweetAction = (id) => ({
   id
 });
 
-export const updateTweetACtion = (tweet) => ({
+export const updateTweetAction = (tweet) => ({
   type: UPDATE_TWEET,
   tweet
 });
