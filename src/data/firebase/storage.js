@@ -25,4 +25,8 @@ export const uploadFile =  (file) => {
 
   });
 
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 422df59e8c41d8d6d7a9a7cbb6049d4a4b21de8f
