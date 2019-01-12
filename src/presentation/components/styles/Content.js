@@ -17,7 +17,20 @@ export const styles = {
   },
   profile: {
     height: "30%",
-    marginBottom: 10
+    marginBottom: 10,
+    position: "relative"
+  },
+  profileAvatar: {
+    height: 100,
+    width: 100,
+    top: 50,
+    left: 50,
+    position: "absolute",
+    transform: "translate(-50%, -50%)"
+  },
+  profileIcon: {
+    height: 50,
+    width: 50
   },
   forYou: {
     marginTop: 10

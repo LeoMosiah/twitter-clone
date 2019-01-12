@@ -5,12 +5,18 @@ import Card from "@material-ui/core/es/Card/Card";
 import { styles } from "./styles/Content";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { Tweet } from "./Tweet";
+import Avatar from "@material-ui/core/es/Avatar/Avatar";
+import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
 
 function ContentComponent({ classes, tweets, user }) {
   return (
     <div className={classes.container}>
       <div className={classes.column}>
-        <Card className={classes.profile} />
+        <Card className={classes.profile}>
+          <Avatar className={classes.profileAvatar}>
+            <AddAPhotoOutlined className={classes.profileIcon} />
+          </Avatar>
+        </Card>
         <Card className={classes.forYou} />
       </div>
       <div className={classes.columnMiddle}>
