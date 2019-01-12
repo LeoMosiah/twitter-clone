@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import TextField from "@material-ui/core/TextField";
 
 export const SettingFormComponent = ({
@@ -48,3 +49,13 @@ export const SettingFormComponent = ({
     />
   </form>
 );
+
+SettingFormComponent.propTypes = {
+  bio: PropTypes.string.isRequired,
+  birthday: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  location: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  website: PropTypes.string.isRequired
+};

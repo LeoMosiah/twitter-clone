@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
 import NotificationsOutlined from "@material-ui/icons/NotificationsOutlined";
@@ -39,3 +40,7 @@ function NavBarComponent({ classes }) {
 }
 
 export const NavBar = withStyles(styles)(NavBarComponent);
+
+NavBarComponent.propTypes = {
+  classes: PropTypes.object.isRequired
+};

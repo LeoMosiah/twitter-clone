@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import { NavBar } from "./NavBar";
 import { Content } from "./Content";
 
@@ -10,3 +11,8 @@ export function HomeComponent({ user, tweets }) {
     </Fragment>
   );
 }
+
+HomeComponent.propTypes = {
+  tweets: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired
+};

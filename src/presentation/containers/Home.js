@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import {
   receiveTweetsAction,
   tweetsSelector
@@ -38,3 +39,10 @@ export const Home = connect(
   mapStateToProps,
   mapDispatchToProps
 )(HomeContainer);
+
+HomeContainer.propTypes = {
+  getTweets: PropTypes.func.isRequired,
+  setUser: PropTypes.func.isRequired,
+  tweets: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired
+};

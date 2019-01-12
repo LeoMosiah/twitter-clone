@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 import Card from "@material-ui/core/es/Card/Card";
 import { styles } from "./styles/Content";
@@ -41,3 +42,9 @@ function ContentComponent({ classes, tweets, user }) {
 }
 
 export const Content = withStyles(styles)(ContentComponent);
+
+ContentComponent.propTypes = {
+  classes: PropTypes.object.isRequired,
+  tweets: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired
+};

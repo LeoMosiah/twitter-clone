@@ -38,9 +38,16 @@ export const styles = {
     backgroundColor: "#E8F5FD",
     height: "8%",
     position: "relative",
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
   tweetForm: {
-    width: "100%"
+    width: "100%",
+    border: 0.5,
+    borderRadius: 5,
+    marginLeft: 5,
+    marginRight: 5,
+    backgroundColor: "white",
+    color: "#1da1f2"
   }
 };
