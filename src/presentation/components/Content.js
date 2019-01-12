@@ -3,29 +3,32 @@ import { withStyles } from "@material-ui/core";
 import Card from "@material-ui/core/es/Card/Card";
 import { styles } from "./styles/Content";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import TextField from "@material-ui/core/TextField";
-import { TweetComponent } from "./Tweet";
+import { Tweet } from "./Tweet";
 
 function ContentComponent({ classes, tweets, user }) {
   return (
     <div className={classes.container}>
       <div className={classes.column}>
-        <Card className={classes.profile}>{console.log(user)}</Card>
+        <Card className={classes.profile} />
         <Card className={classes.forYou} />
       </div>
       <div className={classes.columnMiddle}>
-        <Card className={classes.tweets}>
-          <div className={classes.timeline}>
+        <Card className={classes.timeline}>
+          <div className={classes.timelineHeader}>
             <AccountCircle />
-            <TextField
-              className={classes.tweetForm}
-              margin="normal"
-              variant="outlined"
+            <input
+              type="text"
               placeholder="O que está acontecendo?"
+              className={classes.tweetForm}
             />
           </div>
           {Object.values(tweets).map(tweet => (
-            <TweetComponent key={tweet.id} title={tweet.title} />
+            <Tweet
+              key={tweet.id}
+              body={tweet.body}
+              author={tweet.author}
+              timestamp={tweet.timestamp}
+            />
           ))}
         </Card>
       </div>

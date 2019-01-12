@@ -6,44 +6,17 @@ import {
 } from "../../domain/redux/ducks/tweetsReducer";
 import { HomeComponent } from "../components/Home";
 import {
-  getUserAction,
+  setUserAction,
   userSelector
 } from "../../domain/redux/ducks/userReducer";
-
-const tweets = {
-  "id 1": {
-    id: "id 1",
-    title: "title 1",
-    body: "body 1"
-  },
-  "id 2": {
-    id: "id 2",
-    title: "title 2",
-    body: "body 2"
-  },
-  "id 3": {
-    id: "id 3",
-    title: "title 3",
-    body: "body 3"
-  }
-};
-
-const user = {
-  id: {
-    id: "id",
-    handle: "handle",
-    username: "username",
-    bio: "bio",
-    location: "location",
-    website: "website",
-    birthday: "birthday"
-  }
-};
+import { getTweets, getUser } from "../../data/api/api";
 
 class HomeContainer extends Component {
-  componentDidMount() {
+  async componentDidMount() {
+    const user = await getUser();
+    const tweets = await getTweets();
     this.props.getTweets(tweets);
-    this.props.getUser(user);
+    this.props.setUser(user);
   }
   render() {
     const { user, tweets } = this.props;
@@ -58,7 +31,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   getTweets: receiveTweetsAction,
-  getUser: getUserAction
+  setUser: setUserAction
 };
 
 export const Home = connect(

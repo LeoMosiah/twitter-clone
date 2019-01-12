@@ -22,8 +22,8 @@ export const styles = {
   forYou: {
     marginTop: 10
   },
-  tweets: {
-    height: "100%"
+  timeline: {
+    borderRadius: 0
   },
   followSugestions: {
     height: "60%",
@@ -32,12 +32,15 @@ export const styles = {
   about: {
     marginTop: 10
   },
-  timeline: {
+  timelineHeader: {
     display: "flex",
-    padding: 5
+    padding: 5,
+    backgroundColor: "#E8F5FD",
+    height: "8%",
+    position: "relative",
+    flexDirection: "row"
   },
   tweetForm: {
     width: "100%"
-  },
-  tweet: {}
+  }
 };

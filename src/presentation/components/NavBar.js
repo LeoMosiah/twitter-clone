@@ -9,28 +9,30 @@ import AppBar from "@material-ui/core/AppBar";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
-import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/es/Typography/Typography";
 
 function NavBarComponent({ classes }) {
   return (
     <AppBar position="static" color="inherit">
       <Toolbar className={classes.navBarContainer}>
-        <div className={classes.navBarLeftSide}>
+        <div className={classes.iconContainer}>
           <HomeOutlined />
+          <Typography className={classes.iconName}>Home</Typography>
+        </div>
+        <div className={classes.iconContainer}>
           <FlashOnOutlined />
+          <Typography className={classes.iconName}>Moments</Typography>
+        </div>
+        <div className={classes.iconContainer}>
           <NotificationsOutlined />
+          <Typography className={classes.iconName}>Notifications</Typography>
+        </div>
+        <div className={classes.iconContainer}>
           <EmailOutlined />
+          <Typography className={classes.iconName}>Messages</Typography>
         </div>
-        <div className={classes.navBarRightSide}>
-          <AccountCircle className={classes.accountIcon} />
-          <Button
-            variant="contained"
-            color="primary"
-            className={classes.button}
-          >
-            Twettar
-          </Button>
-        </div>
+        <AccountCircle className={classes.accountIcon} />
+        <button className={classes.button}>Twettar</button>
       </Toolbar>
     </AppBar>
   );
