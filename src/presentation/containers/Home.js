@@ -1,23 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import {
-  receiveTweetsAction,
-  tweetsSelector
-} from "../../domain/redux/ducks/tweetsReducer";
+import { tweetsSelector } from "../../domain/redux/ducks/tweetsReducer";
 import { HomeComponent } from "../components/Home";
-import {
-  setUserAction,
-  userSelector
-} from "../../domain/redux/ducks/userReducer";
-import { getTweets, getUser } from "../../data/api/api";
+import { userSelector } from "../../domain/redux/ducks/userReducer";
+import { getTweetsAction } from "../../domain/redux/sagas/tweetsSaga";
+import { getUserAction } from "../../domain/redux/sagas/userSagas";
 
 class HomeContainer extends Component {
   async componentDidMount() {
-    const user = await getUser();
-    const tweets = await getTweets();
-    this.props.getTweets(tweets);
-    this.props.setUser(user);
+    this.props.getTweets();
+    this.props.getUser();
   }
   render() {
     const { user, tweets } = this.props;
@@ -31,8 +24,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  getTweets: receiveTweetsAction,
-  setUser: setUserAction
+  getTweets: getTweetsAction,
+  getUser: getUserAction
 };
 
 export const Home = connect(

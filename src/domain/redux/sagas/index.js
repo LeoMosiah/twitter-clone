@@ -1,8 +1,9 @@
 import { all, takeLatest } from "redux-saga/effects";
-import { RECEIVE_TWEETS } from "../ducks/tweetsReducer";
-import { SET_USER } from "../ducks/userReducer";
-import { setUserSaga } from "./userSagas";
+import { GET_USER, getUserSaga } from "./userSagas";
+import { GET_TWEETS, getTweetsSaga } from "./tweetsSaga";
 
 export function* rootSaga() {
-  yield [takeLatest(SET_USER, setUserSaga)];
+  yield all()[
+    (takeLatest(GET_USER, getUserSaga), takeLatest(GET_TWEETS, getTweetsSaga))
+  ];
 }
