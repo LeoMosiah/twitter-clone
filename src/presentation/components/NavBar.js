@@ -7,7 +7,6 @@ import EmailOutlined from "@material-ui/icons/EmailOutlined";
 import FlashOnOutlined from "@material-ui/icons/FlashOnOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
-import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
 import Typography from "@material-ui/core/es/Typography/Typography";

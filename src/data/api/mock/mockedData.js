@@ -20,15 +20,13 @@ export const mockedTweets = {
 };
 
 export const mockerdUser = {
-  id: {
-    id: "id",
-    handle: "handle",
-    username: "username",
-    bio: "bio",
-    location: "location",
-    website: "website",
-    birthday: "birthday",
-    followers: 8,
-    following: 25
-  }
+  id: "id",
+  handle: "handle",
+  username: "username",
+  bio: "bio",
+  location: "location",
+  website: "website",
+  birthday: "birthday",
+  followers: 8,
+  following: 25
 };

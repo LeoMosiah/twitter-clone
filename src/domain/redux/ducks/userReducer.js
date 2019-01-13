@@ -24,7 +24,7 @@ const handleGetUser = (state, action) => {
 
 const handleUpdateUser = (state, action) => {
   let clonedState = _.cloneDeep(state);
-  clonedState[action.user.id] = action.user;
+  clonedState = action.user;
   return clonedState;
 };
 

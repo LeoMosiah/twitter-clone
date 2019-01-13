@@ -7,15 +7,63 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import { Tweet } from "./Tweet";
 import Avatar from "@material-ui/core/es/Avatar/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
+import Typography from "@material-ui/core/es/Typography/Typography";
+import { Link } from "react-router-dom";
 
 function ContentComponent({ classes, tweets, user }) {
   return (
     <div className={classes.container}>
       <div className={classes.column}>
         <Card className={classes.profile}>
-          <Avatar className={classes.profileAvatar}>
-            <AddAPhotoOutlined className={classes.profileIcon} />
-          </Avatar>
+          <div className={classes.profileUpperPart}>
+            <div className={classes.profileFrame}>
+              <Avatar
+                className={classes.profileAvatar}
+                onClick={() => alert("got click")}
+              >
+                <AddAPhotoOutlined className={classes.profileIcon} />
+              </Avatar>
+            </div>
+          </div>
+          <div className={classes.profileBottomPart}>
+            <div className={classes.profileContactInfo}>
+              <Link
+                to={`/${user.username}`}
+                className={classes.profileUsername}
+              >
+                {user.username}
+              </Link>
+              <Link to={`/${user.username}`} className={classes.profileHandle}>
+                {user.handle}
+              </Link>
+            </div>
+            <div className={classes.profileUserFollowersInfo}>
+              <div style={{ display: "block", cursor: "pointer" }}>
+                <Typography className={classes.profileFollowersDetails}>
+                  Tweets
+                </Typography>
+                <Typography className={classes.profileFollowersMetrics}>
+                  1
+                </Typography>
+              </div>
+              <div style={{ display: "block", cursor: "pointer" }}>
+                <Typography className={classes.profileFollowersDetails}>
+                  Seguindo
+                </Typography>
+                <Typography className={classes.profileFollowersMetrics}>
+                  1
+                </Typography>
+              </div>
+              <div style={{ display: "block", cursor: "pointer" }}>
+                <Typography className={classes.profileFollowersDetails}>
+                  Seguidores
+                </Typography>
+                <Typography className={classes.profileFollowersMetrics}>
+                  1
+                </Typography>
+              </div>
+            </div>
+          </div>
         </Card>
         <Card className={classes.forYou} />
       </div>

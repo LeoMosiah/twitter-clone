@@ -35,7 +35,7 @@ export const Home = connect(
 
 HomeContainer.propTypes = {
   getTweets: PropTypes.func.isRequired,
-  setUser: PropTypes.func.isRequired,
+  getUser: PropTypes.func.isRequired,
   tweets: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired
 };
