@@ -1,5 +1,13 @@
 import { mockedTweets, mockerdUser } from "./mock/mockedData";
 
-export const getTweets = async () => Promise.resolve(mockedTweets);
+export const getTweets = async (latency = 1000) => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(mockedTweets), latency);
+  });
+};
 
-export const getUser = async () => Promise.resolve(mockerdUser);
+export const getUser = async latency => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(mockerdUser), latency);
+  });
+};
