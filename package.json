@@ -26,7 +26,6 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "axios-mock-adapter": "1.16.0",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
     "firebase-tools": "6.2.2",
