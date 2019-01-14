@@ -10,6 +10,7 @@ import AppBar from "@material-ui/core/AppBar";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
 import Typography from "@material-ui/core/es/Typography/Typography";
+import { Modal } from './Modal';
 
 function NavBarComponent({ classes }) {
   return (
@@ -34,6 +35,7 @@ function NavBarComponent({ classes }) {
         <AccountCircle className={classes.accountIcon} />
         <button className={classes.button}>Twettar</button>
       </Toolbar>
+      <Modal Trigger={<button className={classes.button}>Twettar</button>}/>
     </AppBar>
   );
 }
