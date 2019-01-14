@@ -3,4 +3,4 @@ install:
 
 deploy:
 	npm run build
-	@npm firebase deploy --token ${FIREBASE_DEPLOY_TOKEN}
+	@npx firebase deploy --token ${FIREBASE_DEPLOY_TOKEN}
