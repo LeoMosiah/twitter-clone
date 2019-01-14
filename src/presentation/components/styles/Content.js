@@ -1,7 +1,6 @@
 export const styles = {
   container: {
     display: "flex",
-    flexDirection: "column",
     height: "95vh",
     backgroundColor: "#e6ecf0",
     paddingLeft: 30,
