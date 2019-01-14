@@ -16,7 +16,7 @@ jobs:
 
       - run:
           name: "Npm Install"
-          command: npm install
+          command: make install
 
       - save_cache:
           paths:
@@ -27,6 +27,3 @@ jobs:
           name: "Run tests"
           command: npm run test
 
-      - run:
-          name "Deploy app"
-          command: npm run build && @npx firebase deploy --token ${FIREBASE_DEPLOY_TOKEN}
