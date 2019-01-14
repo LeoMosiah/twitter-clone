@@ -1,7 +1,7 @@
 export class Tweet {
-  constructor(title, body, timestamp){
-    this.title = title;
+  constructor(author, body) {
+    this.author = author;
     this.body = body;
-    this.timestamp = timestamp;
+    this.timestamp = Date.now();
   }
 }

@@ -3,11 +3,36 @@ import PropTypes from "prop-types";
 import { NavBar } from "./NavBar";
 import { Content } from "./Content";
 
-export function HomeComponent({ user, tweets }) {
+export function HomeComponent({
+  user,
+  tweets,
+  handleSubmit,
+  handleChange,
+  body,
+  isModalOpen,
+  handleCloseModal,
+  handleOpenModal,
+  isEditing
+}) {
   return (
     <Fragment>
-      <NavBar user={user} />
-      <Content tweets={tweets} user={user} />
+      <NavBar
+        user={user}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        body={body}
+        isModalOpen={isModalOpen}
+        handleCloseModal={handleCloseModal}
+        handleOpenModal={handleOpenModal}
+      />
+      <Content
+        tweets={tweets}
+        user={user}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        body={body}
+        isEditing={isEditing}
+      />
     </Fragment>
   );
 }

@@ -126,5 +126,20 @@ export const styles = {
     marginRight: 5,
     backgroundColor: "white",
     color: "#1da1f2"
+  },
+  button: {
+    color: "#fff",
+    backgroundColor: "#4AB3F4",
+    borderColor: "transparent",
+    border: "1px solid #1da1f2",
+    borderRadius: "100px",
+    fontSize: "10px",
+    fontWeight: "bold",
+    lineHeight: "8px",
+    padding: "6px 16px",
+    cursor: "pointer"
+  },
+  avatarIcon: {
+    paddingTop: 4
   }
 };
