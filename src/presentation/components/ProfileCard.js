@@ -17,7 +17,7 @@ const UserPlaceHolder = ({ isEditing, username, classes, handleChange, handleSub
     );
   } else {
     return (
-        <Typography className={classes.username} onClick={() => handleEditing()}>username</Typography>
+        <Typography className={classes.username} onClick={() => handleEditing()}>{username}</Typography>
     );
   }
 };
