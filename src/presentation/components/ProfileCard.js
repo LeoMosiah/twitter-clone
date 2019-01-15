@@ -7,21 +7,22 @@ import Avatar from "@material-ui/core/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
 import Typography from "@material-ui/core/Typography";
 
-const UserPlaceHolder = ({ isEditing, username, classe }) => {
-  console.log(isEditing);
-  if (isEditing === true) {
-    return <input />;
-  } else {
+const UserPlaceHolder = ({ isEditing, username, classe, handleChange, handleSubmit }) => {
+  if (isEditing) {
     return (
       <Fragment>
-        <Typography className={classe}>username</Typography>
-        <button onClick={() => console.log("mudei o username")}>Ok</button>
+        <input value={username} placeholder={username} onChange={ event => handleChange(event.target.value) } />
+        <button onClick={() => handleSubmit()}>Ok</button>
       </Fragment>
+    );
+  } else {
+    return (
+        <Typography className={classe}>username</Typography>
     );
   }
 };
 
-function ProfileCard({ classes, user, isEditing }) {
+function ProfileCard({ classes, user, isEditing, handleChange, handleSubmit }) {
   return (
     <Card className={classes.container}>
       <div className={classes.cover}>
@@ -37,6 +38,8 @@ function ProfileCard({ classes, user, isEditing }) {
             isEditing={isEditing}
             username={user.username}
             classe={classes.username}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
           />
           <Typography className={classes.handle}>{user.handle}</Typography>
         </div>

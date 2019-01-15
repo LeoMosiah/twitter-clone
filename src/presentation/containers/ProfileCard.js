@@ -25,6 +25,8 @@ class ProfileCardContainer extends Component {
         user={user}
         isEditing={isEditing}
         username={username}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
       />
     );
   }
