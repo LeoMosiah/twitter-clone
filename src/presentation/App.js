@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { Router } from "./Router";
+import { Home } from "./containers/Home";
 
-export const App = () => <Router />;
+export const App = () => <Home />;
 
 App.displayName = "App";

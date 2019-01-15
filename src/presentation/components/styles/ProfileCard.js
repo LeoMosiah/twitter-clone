@@ -4,7 +4,7 @@ export const styles = {
     position: "relative",
     borderRadius: 0,
     float: "left",
-    marginRight: "20px"
+    marginRight: "10px"
   },
   cover: {
     backgroundColor: "#1da1f2",

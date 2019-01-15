@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import { styles } from "./styles/Modal";
 import Card from "@material-ui/core/es/Card/Card";
-import TextField from "@material-ui/core/TextField";
 
 function ModalContainer({
   classes,
@@ -30,15 +29,10 @@ function ModalContainer({
         </div>
         <div className={classes.content}>
           <div>
-            <TextField
+            <textarea
               classes={classes.formContainer}
-              label="O que está acontencendo"
-              multiline
-              rows="4"
+              placeholder="O que está acontencendo"
               className={classes.form}
-              margin="normal"
-              variant="outlined"
-              fullWidth
               onChange={event => handleChange(event.target.value)}
             />
           </div>

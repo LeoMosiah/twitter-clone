@@ -20,7 +20,7 @@ const UserPlaceHolder = (isEditing, username, classe) => {
   }
 };
 
-function ProfileCardComponent({ classes, user, isEditing }) {
+function ProfileCard({ classes, user, isEditing }) {
   return (
     <Card className={classes.container}>
       <div className={classes.cover}>
@@ -62,11 +62,11 @@ function ProfileCardComponent({ classes, user, isEditing }) {
   );
 }
 
-ProfileCardComponent.propTypes = {
+ProfileCard.propTypes = {
   classes: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired
 };
 
-ProfileCardComponent.displayName = "ProfileCard";
+ProfileCard.displayName = "ProfileCard";
 
-export const ProfileCard = withStyles(styles)(ProfileCardComponent);
+export const ProfileCardComponent = withStyles(styles)(ProfileCard);

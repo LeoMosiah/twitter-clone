@@ -1,18 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Tweet } from "./Tweet";
 import { styles } from "./styles/Timeline";
 import { withStyles } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Card from "@material-ui/core/Card";
+import { Tweet } from "./Tweet";
 
-function TimelineComponent({
-  classes,
-  tweets,
-  handleSubmit,
-  body,
-  handleChange
-}) {
+function Timeline({ classes, tweets, handleSubmit, body, handleChange }) {
   return (
     <Card className={classes.container}>
       <div className={classes.header}>
@@ -39,9 +33,9 @@ function TimelineComponent({
   );
 }
 
-export const Timeline = withStyles(styles)(TimelineComponent);
+export const TimelineComponent = withStyles(styles)(Timeline);
 
-TimelineComponent.propTypes = {
+Timeline.propTypes = {
   classes: PropTypes.object.isRequired,
   tweets: PropTypes.any
 };

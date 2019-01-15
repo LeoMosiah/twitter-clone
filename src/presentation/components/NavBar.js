@@ -12,7 +12,7 @@ import { styles } from "./styles/NavBar";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import { ModalComponent } from "./Modal";
 
-function NavBarComponent(props) {
+function NavBar(props) {
   const {
     classes,
     handleSubmit,
@@ -57,8 +57,10 @@ function NavBarComponent(props) {
   );
 }
 
-export const NavBar = withStyles(styles)(NavBarComponent);
-
-NavBarComponent.propTypes = {
+NavBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
+
+NavBar.displayName = "NavBar";
+
+export const NavBarComponent = withStyles(styles)(NavBar);
