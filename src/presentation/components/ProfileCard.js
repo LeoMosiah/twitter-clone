@@ -7,7 +7,8 @@ import Avatar from "@material-ui/core/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
 import Typography from "@material-ui/core/Typography";
 
-const UserPlaceHolder = (isEditing, username, classe) => {
+const UserPlaceHolder = ({ isEditing, username, classe }) => {
+  console.log(isEditing);
   if (isEditing === true) {
     return <input />;
   } else {
@@ -33,9 +34,9 @@ function ProfileCard({ classes, user, isEditing }) {
       <div className={classes.userInfo}>
         <div className={classes.contactInfo}>
           <UserPlaceHolder
-            classe={classes.username}
             isEditing={isEditing}
             username={user.username}
+            classe={classes.username}
           />
           <Typography className={classes.handle}>{user.handle}</Typography>
         </div>
