@@ -19,7 +19,9 @@ export const styles = {
     position: "absolute",
     top: "2%",
     left: "95%",
-    color: "#777"
+    color: "#777",
+    fontSize: "24px",
+    lineHeight: "18px"
   },
   content: {
     backgroundColor: "rgba(29,161,242,0.1)",
