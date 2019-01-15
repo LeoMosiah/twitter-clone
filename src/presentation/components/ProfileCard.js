@@ -94,7 +94,7 @@ const UserPlaceHolder = ({
           value={username}
           onChange={event => handleChange(event.target.value)}
         />
-        <button onClick={() => handleSubmit()}>Ok</button>
+        <button onClick={() => handleSubmit(username)}>Ok</button>
       </Fragment>
     );
   } else {

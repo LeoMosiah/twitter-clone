@@ -6,18 +6,17 @@ import {
   userSelector
 } from "../../domain/redux/ducks/userReducer";
 import { connect } from "react-redux";
+import { User } from "../../domain/entities/user";
 
 class ProfileCardContainer extends Component {
   state = {
-    isEditing: false,
-    username: this.props.user.username
+    isEditing: false
   };
   handleChange = username => {
-    this.setState({ username });
+    this.props.changeUsername(username);
   };
-  handleSubmit = () => {
-    const newUsername = this.state.username;
-    this.props.changeUsername(newUsername);
+  handleSubmit = username => {
+    this.props.changeUsername(username);
     this.setState({
       isEditing: false
     });
@@ -29,13 +28,12 @@ class ProfileCardContainer extends Component {
   };
   render() {
     const { user } = this.props;
-    const { isEditing, username } = this.state;
-    console.log(this.props.user.username);
+    const { isEditing } = this.state;
     return (
       <ProfileCardComponent
         user={user}
         isEditing={isEditing}
-        username={username}
+        username={user.username}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
         handleEditing={this.handleEditing}
@@ -53,13 +51,7 @@ const mapDispatchToProps = {
 };
 
 ProfileCardContainer.propTypes = {
-  isEditing: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    handle: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    following: PropTypes.number.isRequired
-  }),
+  user: User.propTypes.isRequired,
   changeUsername: PropTypes.func.isRequired
 };
 
