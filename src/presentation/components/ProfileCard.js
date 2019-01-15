@@ -34,7 +34,6 @@ function ProfileCard({ classes, user, username, isEditing, handleChange, handleS
       </div>
       <div className={classes.userInfo}>
         <div className={classes.contactInfo}>
-          {console.log(username)}
           <UserPlaceHolder
             isEditing={isEditing}
             username={username}
