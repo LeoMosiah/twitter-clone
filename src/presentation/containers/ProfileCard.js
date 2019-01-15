@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ProfileCardComponent } from "../components/ProfileCard";
 import {
-  updateUserAction,
+  updateUsernameAction,
   userSelector
 } from "../../domain/redux/ducks/userReducer";
 import { connect } from "react-redux";
@@ -35,7 +35,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  changeUsername: updateUserAction
+  changeUsername: updateUsernameAction
 };
 
 export const ProfileCard = connect(

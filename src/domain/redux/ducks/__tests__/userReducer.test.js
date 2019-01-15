@@ -1,27 +1,21 @@
-import { setUserAction, updateUserAction, userReducer } from "../userReducer";
+import { setUserAction, updateUsernameAction, userReducer } from "../userReducer";
 
 describe("User Reducer", function() {
   it("should get the user and put on the store", function() {
     const initialState = {};
 
     const user = {
-      id: "id",
       handle: "handle",
       username: "username",
-      bio: "bio",
-      location: "location",
-      website: "website",
-      birthday: "birthday"
+      followers: "1",
+      following: "1"
     };
 
     const expectedState = {
-      id: "id",
       handle: "handle",
       username: "username",
-      bio: "bio",
-      location: "location",
-      website: "website",
-      birthday: "birthday"
+      followers: "1",
+      following: "1"
     };
 
     expect(userReducer(initialState, setUserAction(user))).toEqual(
@@ -31,36 +25,24 @@ describe("User Reducer", function() {
 
   it("should update user informations on the store", function() {
     const initialState = {
-      id: "id",
       handle: "handle",
       username: "username",
-      bio: "bio",
-      location: "location",
-      website: "website",
-      birthday: "birthday"
+      followers: "1",
+      following: "1"
     };
 
     const updatedUser = {
-      id: "id",
-      handle: "new handle",
       username: "new username",
-      bio: "new bio",
-      location: "new location",
-      website: "new website",
-      birthday: "new birthday"
     };
 
     const expectedState = {
-      id: "id",
-      handle: "new handle",
+      handle: "handle",
       username: "new username",
-      bio: "new bio",
-      location: "new location",
-      website: "new website",
-      birthday: "new birthday"
+      followers: "1",
+      following: "1"
     };
 
-    expect(userReducer(initialState, updateUserAction(updatedUser))).toEqual(
+    expect(userReducer(initialState, updateUsernameAction(updatedUser))).toEqual(
       expectedState
     );
   });

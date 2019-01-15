@@ -11,9 +11,9 @@ export const setUserAction = user => ({
   user
 });
 
-export const updateUserAction = user => ({
+export const updateUsernameAction = username => ({
   type: UPDATE_USER,
-  user
+  username
 });
 
 const handleGetUser = (state, action) => {
@@ -22,9 +22,9 @@ const handleGetUser = (state, action) => {
   return clonedState;
 };
 
-const handleUpdateUser = (state, action) => {
+const handleUpdateUsername = (state, action) => {
   let clonedState = _.cloneDeep(state);
-  clonedState = action.user;
+  clonedState.username = action.username;
   return clonedState;
 };
 
@@ -33,7 +33,7 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     case SET_USER:
       return handleGetUser(state, action);
     case UPDATE_USER:
-      return handleUpdateUser(state, action);
+      return handleUpdateUsername(state, action);
     default:
       return state;
   }
