@@ -20,8 +20,8 @@ export const mockedTweets = {
 };
 
 export const mockedUser = {
-  username: "username",
-  handle: "handle",
+  username: "LeoMosiah",
+  handle: "@leomosiah",
   followers: 8,
   following: 25
 };
