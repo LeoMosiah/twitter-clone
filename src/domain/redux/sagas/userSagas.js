@@ -12,7 +12,7 @@ export const getUserAction = () => ({
 export function* getUserSaga() {
   try {
     const userInfo = yield call(getUser);
-    const user = new User(userInfo.username,userInfo.bio,userInfo.location,userInfo.website,userInfo.birthday,userInfo.handle,userInfo.followers,userInfo.following);
+    const user = new User(userInfo.username,userInfo.handle,userInfo.followers,userInfo.following);
     yield put(setUserAction(user));
   } catch (error) {
     console.log(error);

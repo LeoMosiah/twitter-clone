@@ -20,12 +20,8 @@ export const mockedTweets = {
 };
 
 export const mockerdUser = {
-  handle: "handle",
   username: "username",
-  bio: "bio",
-  location: "location",
-  website: "website",
-  birthday: "birthday",
+  handle: "handle",
   followers: 8,
   following: 25
 };
