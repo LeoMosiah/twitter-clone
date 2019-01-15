@@ -7,7 +7,7 @@ import Avatar from "@material-ui/core/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
 import Typography from "@material-ui/core/Typography";
 
-const UserPlaceHolder = ({ isEditing, username, classe, handleChange, handleSubmit }) => {
+const UserPlaceHolder = ({ isEditing, username, classe, handleChange, handleSubmit, handleEditing }) => {
   if (isEditing) {
     return (
       <Fragment>
@@ -17,12 +17,12 @@ const UserPlaceHolder = ({ isEditing, username, classe, handleChange, handleSubm
     );
   } else {
     return (
-        <Typography className={classe}>username</Typography>
+        <Typography className={classe} onClick={() => handleEditing()}>username</Typography>
     );
   }
 };
 
-function ProfileCard({ classes, user, isEditing, handleChange, handleSubmit }) {
+function ProfileCard({ classes, user, isEditing, handleChange, handleSubmit, handleEditing }) {
   return (
     <Card className={classes.container}>
       <div className={classes.cover}>
@@ -40,6 +40,7 @@ function ProfileCard({ classes, user, isEditing, handleChange, handleSubmit }) {
             classe={classes.username}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            handleEditing={handleEditing}
           />
           <Typography className={classes.handle}>{user.handle}</Typography>
         </div>

@@ -17,6 +17,11 @@ class ProfileCardContainer extends Component {
   handleSubmit = username => {
     this.props.changeUsername(username);
   };
+  handleEditing = () => {
+    this.setState({
+      isEditing: true
+    })
+  };
   render() {
     const { user } = this.props;
     const { isEditing, username } = this.state;
@@ -27,6 +32,7 @@ class ProfileCardContainer extends Component {
         username={username}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        handleEditing={this.handleEditing}
       />
     );
   }
