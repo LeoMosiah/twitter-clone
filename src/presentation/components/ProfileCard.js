@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import Card from "@material-ui/core/es/Card/Card";
-import { styles } from "./styles/Content";
+import { styles } from "./styles/ProfileCard";
 import { withStyles } from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
@@ -11,58 +11,50 @@ const UserPlaceHolder = (isEditing, username, classe) => {
   if (isEditing === true) {
     return <input />;
   } else {
-    return <Typography className={classe}>username</Typography>;
+    return (
+      <Fragment>
+        <Typography className={classe}>username</Typography>
+        <button onClick={() => console.log("mudei o username")}>Ok</button>
+      </Fragment>
+    );
   }
 };
 
 function ProfileCardComponent({ classes, user, isEditing }) {
   return (
-    <Card className={classes.profile}>
-      <div className={classes.profileUpperPart}>
-        <div className={classes.profileFrame}>
-          <Avatar
-            className={classes.profileAvatar}
-            onClick={() => alert("got click")}
-          >
-            <AddAPhotoOutlined className={classes.profileIcon} />
+    <Card className={classes.container}>
+      <div className={classes.cover}>
+        <div className={classes.avatarContainer}>
+          <Avatar className={classes.avatar} onClick={() => alert("got click")}>
+            <AddAPhotoOutlined className={classes.icon} />
           </Avatar>
         </div>
       </div>
-      <div className={classes.profileBottomPart}>
-        <div className={classes.profileContactInfo}>
+      <div className={classes.userInfo}>
+        <div className={classes.contactInfo}>
           <UserPlaceHolder
-            classe={classes.profileUsername}
+            classe={classes.username}
             isEditing={isEditing}
             username={user.username}
           />
-          <Typography className={classes.profileHandle}>
-            {user.handle}
-          </Typography>
+          <Typography className={classes.handle}>{user.handle}</Typography>
         </div>
-        <div className={classes.profileUserFollowersInfo}>
+        <div className={classes.userFollowersInfo}>
           <div style={{ display: "block", cursor: "pointer" }}>
-            <Typography className={classes.profileFollowersDetails}>
-              Tweets
-            </Typography>
-            <Typography className={classes.profileFollowersMetrics}>
-              1
-            </Typography>
+            <Typography className={classes.followersDetails}>Tweets</Typography>
+            <Typography className={classes.followersMetrics}>1</Typography>
           </div>
           <div style={{ display: "block", cursor: "pointer" }}>
-            <Typography className={classes.profileFollowersDetails}>
+            <Typography className={classes.followersDetails}>
               Seguindo
             </Typography>
-            <Typography className={classes.profileFollowersMetrics}>
-              1
-            </Typography>
+            <Typography className={classes.followersMetrics}>1</Typography>
           </div>
           <div style={{ display: "block", cursor: "pointer" }}>
-            <Typography className={classes.profileFollowersDetails}>
+            <Typography className={classes.followersDetails}>
               Seguidores
             </Typography>
-            <Typography className={classes.profileFollowersMetrics}>
-              1
-            </Typography>
+            <Typography className={classes.followersMetrics}>1</Typography>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
-import Card from "@material-ui/core/es/Card/Card";
 import { styles } from "./styles/Content";
 import { ProfileCard } from "./ProfileCard";
 import { Timeline } from "./Timeline";
+import { FollowSugestionCard } from "./FollowSugestionCard";
 
 function ContentComponent({
   classes,
@@ -29,8 +29,7 @@ function ContentComponent({
         />
       </div>
       <div className={classes.column}>
-        <Card className={classes.followSugestions} />
-        <Card className={classes.about} />
+        <FollowSugestionCard />
       </div>
     </div>
   );
