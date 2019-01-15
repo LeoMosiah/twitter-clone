@@ -16,7 +16,7 @@ class ProfileCardContainer extends Component {
     this.setState({ username });
   };
   handleSubmit = () => {
-    const newUsername = this.state.username
+    const newUsername = this.state.username;
     this.props.changeUsername(newUsername);
     this.setState({
       isEditing: false

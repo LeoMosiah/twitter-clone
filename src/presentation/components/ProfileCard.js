@@ -53,13 +53,13 @@ function ProfileCard({ classes, user, username, isEditing, handleChange, handleS
             <Typography className={classes.followersDetails}>
               Seguindo
             </Typography>
-            <Typography className={classes.followersMetrics}>1</Typography>
+            <Typography className={classes.followersMetrics}>{user.following}</Typography>
           </div>
           <div style={{ display: "block", cursor: "pointer" }}>
             <Typography className={classes.followersDetails}>
               Seguidores
             </Typography>
-            <Typography className={classes.followersMetrics}>1</Typography>
+            <Typography className={classes.followersMetrics}>{user.followers}</Typography>
           </div>
         </div>
       </div>

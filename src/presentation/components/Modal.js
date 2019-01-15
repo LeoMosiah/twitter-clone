@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import { styles } from "./styles/Modal";
 import Card from "@material-ui/core/es/Card/Card";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 
 function ModalContainer({
   classes,
@@ -26,9 +27,11 @@ function ModalContainer({
           <Typography align="center" variant="h6" className={classes.title}>
             Publicar um novo Tweet
           </Typography>
+          <button onClick={() => handleCloseModal()}>X</button>
         </div>
         <div className={classes.content}>
           <div>
+            <AccountCircle />
             <textarea
               classes={classes.formContainer}
               placeholder="O que está acontencendo"
