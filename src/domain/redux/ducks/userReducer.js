@@ -2,7 +2,7 @@ import _ from "lodash";
 
 const INITIAL_STATE = {};
 export const SET_USER = "user/setUser";
-const UPDATE_USER = "user/update";
+const UPDATE_USER = "user/updateUsername";
 
 export const userSelector = state => state.user;
 
