@@ -5,6 +5,6 @@ import { NavBar } from "../containers/NavBar";
 export const HomeComponent = () => (
   <Fragment>
     <NavBar />
-    <Main />
+    <Main/>
   </Fragment>
 );
