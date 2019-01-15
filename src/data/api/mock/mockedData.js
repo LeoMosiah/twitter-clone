@@ -19,7 +19,7 @@ export const mockedTweets = {
   }
 };
 
-export const mockerdUser = {
+export const mockedUser = {
   username: "username",
   handle: "handle",
   followers: 8,

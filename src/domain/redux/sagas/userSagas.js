@@ -11,8 +11,7 @@ export const getUserAction = () => ({
 
 export function* getUserSaga() {
   try {
-    const userInfo = yield call(getUser);
-    const user = new User(userInfo.username,userInfo.handle,userInfo.followers,userInfo.following);
+    const user = yield call(getUser);
     yield put(setUserAction(user));
   } catch (error) {
     console.log(error);

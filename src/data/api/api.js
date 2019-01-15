@@ -1,4 +1,4 @@
-import { mockedTweets, mockerdUser } from "./mock/mockedData";
+import { mockedTweets, mockedUser } from "./mock/mockedData";
 
 export const getTweets = async (latency = 1000) => {
   return new Promise(resolve => {
@@ -8,6 +8,6 @@ export const getTweets = async (latency = 1000) => {
 
 export const getUser = async latency => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(mockerdUser), latency);
+    setTimeout(() => resolve(mockedUser), latency);
   });
 };
