@@ -24,7 +24,14 @@ export const styles = {
     width: 500,
     padding: 50
   },
-  form: {},
+  form: {
+    border: "1px solid black",
+    color: "#1da1f2",
+    padding: "10px",
+    width: "500px",
+    height: "300px",
+    resize: "none",
+  },
   button: {
     color: "#fff",
     backgroundColor: "#4AB3F4",

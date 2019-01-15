@@ -33,7 +33,7 @@ function ModalContainer({
           <div>
             <AccountCircle />
             <textarea
-              classes={classes.formContainer}
+              classes={classes.form}
               placeholder="O que está acontencendo"
               className={classes.form}
               onChange={event => handleChange(event.target.value)}
