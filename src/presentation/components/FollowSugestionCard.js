@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Card from "@material-ui/core/es/Card/Card";
 import { styles } from "./styles/FollowSugestionCard";
 import { withStyles } from "@material-ui/core";
@@ -48,5 +49,11 @@ function FollowSugestionComponent({ classes }) {
     </Card>
   );
 }
+
+FollowSugestionComponent.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+FollowSugestionComponent.displayName = "FollowSugestion";
 
 export const FollowSugestionCard = withStyles(styles)(FollowSugestionComponent);

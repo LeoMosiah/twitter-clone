@@ -16,10 +16,12 @@ function MainComponent({ classes }) {
   );
 }
 
-export const Main = withStyles(styles)(MainComponent);
+MainComponent.displayName = "Main";
 
 MainComponent.propTypes = {
   classes: PropTypes.object.isRequired,
   tweets: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired
 };
+
+export const Main = withStyles(styles)(MainComponent);

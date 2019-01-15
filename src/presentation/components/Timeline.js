@@ -33,9 +33,11 @@ function Timeline({ classes, tweets, handleSubmit, body, handleChange }) {
   );
 }
 
-export const TimelineComponent = withStyles(styles)(Timeline);
+Timeline.displayName = "Timeline";
 
 Timeline.propTypes = {
   classes: PropTypes.object.isRequired,
   tweets: PropTypes.any
 };
+
+export const TimelineComponent = withStyles(styles)(Timeline);

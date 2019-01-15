@@ -31,7 +31,7 @@ function TweetComponent({ author, body, timestamp, classes }) {
   );
 }
 
-export const Tweet = withStyles(styles)(TweetComponent);
+TweetComponent.displayName = "Tweet";
 
 TweetComponent.propTypes = {
   author: PropTypes.string.isRequired,
@@ -39,3 +39,5 @@ TweetComponent.propTypes = {
   classes: PropTypes.object.isRequired,
   timestamp: PropTypes.number.isRequired
 };
+
+export const Tweet = withStyles(styles)(TweetComponent);

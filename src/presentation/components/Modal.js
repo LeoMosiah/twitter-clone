@@ -49,4 +49,6 @@ ModalContainer.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
+ModalContainer.displayName = "Modal";
+
 export const ModalComponent = withStyles(styles)(ModalContainer);
