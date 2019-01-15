@@ -31,9 +31,8 @@ describe("User Reducer", function() {
       following: "1"
     };
 
-    const updatedUser = {
-      username: "new username",
-    };
+    const newUsername = "new username"
+  
 
     const expectedState = {
       handle: "handle",
@@ -42,7 +41,7 @@ describe("User Reducer", function() {
       following: "1"
     };
 
-    expect(userReducer(initialState, updateUsernameAction(updatedUser))).toEqual(
+    expect(userReducer(initialState, updateUsernameAction(newUsername))).toEqual(
       expectedState
     );
   });
