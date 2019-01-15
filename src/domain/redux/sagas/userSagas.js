@@ -1,7 +1,6 @@
 import { getUser } from "../../../data/api/api";
 import { setUserAction } from "../ducks/userReducer";
 import { call, put } from "redux-saga/effects";
-import { User } from '../../entities/user';
 
 export const GET_USER = "saga/getUser";
 
