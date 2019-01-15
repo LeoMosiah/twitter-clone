@@ -1,6 +1,9 @@
 export const styles = {
   container: {
-    borderRadius: 0
+    borderRadius: 0,
+    float: "left",
+    width: "700px",
+    marginRight: "10px"
   },
   header: {
     display: "flex",

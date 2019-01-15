@@ -1,7 +1,8 @@
 export const styles = {
   container: {
     borderRadius: 0,
-    width: "290px"
+    width: "290px",
+    float: "left"
   },
   header: {
     padding: "10px"

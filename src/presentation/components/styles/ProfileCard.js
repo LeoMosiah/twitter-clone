@@ -1,9 +1,10 @@
 export const styles = {
   container: {
     width: "290px",
-    marginBottom: 10,
     position: "relative",
-    borderRadius: 0
+    borderRadius: 0,
+    float: "left",
+    marginRight: "20px"
   },
   cover: {
     backgroundColor: "#1da1f2",

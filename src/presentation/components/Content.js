@@ -17,20 +17,14 @@ function ContentComponent({
 }) {
   return (
     <div className={classes.container}>
-      <div className={classes.column}>
-        <ProfileCard user={user} isEditing={isEditing} />
-      </div>
-      <div className={classes.columnMiddle}>
-        <Timeline
-          tweets={tweets}
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
-          body={body}
-        />
-      </div>
-      <div className={classes.column}>
-        <FollowSugestionCard />
-      </div>
+      <ProfileCard user={user} isEditing={isEditing} />
+      <Timeline
+        tweets={tweets}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        body={body}
+      />
+      <FollowSugestionCard />
     </div>
   );
 }
