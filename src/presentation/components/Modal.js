@@ -27,7 +27,7 @@ function ModalContainer({
           <Typography align="center" variant="h6" className={classes.title}>
             Publicar um novo Tweet
           </Typography>
-          <button className={classes.closeButton} onClick={() => handleCloseModal()}>X</button>
+          <span className={classes.closeButton} onClick={() => handleCloseModal()}>&times;</span>
         </div>
         <div className={classes.content}>
           <div>
