@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Tweet } from "./Tweet";
-import { styles } from "./styles/Content";
+import { styles } from "./styles/Timeline";
 import { withStyles } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Card from "@material-ui/core/Card";
@@ -14,13 +14,13 @@ function TimelineComponent({
   handleChange
 }) {
   return (
-    <Card className={classes.timeline}>
-      <div className={classes.timelineHeader}>
-        <AccountCircle className={classes.avatarIcon} />
+    <Card className={classes.container}>
+      <div className={classes.header}>
+        <AccountCircle className={classes.avatar} />
         <input
           type="text"
           placeholder="O que está acontecendo?"
-          className={classes.tweetForm}
+          className={classes.form}
           onChange={event => handleChange(event.target.value)}
         />
         <button className={classes.button} onClick={() => handleSubmit(body)}>
