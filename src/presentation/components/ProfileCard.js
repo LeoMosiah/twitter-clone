@@ -7,22 +7,15 @@ import Avatar from "@material-ui/core/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
 import Typography from "@material-ui/core/Typography";
 
-const UserPlaceHolder = ({ isEditing, username, classes, handleChange, handleSubmit, handleEditing }) => {
-  if (isEditing) {
-    return (
-      <Fragment>
-        <input type="text" value={username} onChange={ event => handleChange(event.target.value) } />
-        <button onClick={() => handleSubmit()}>Ok</button>
-      </Fragment>
-    );
-  } else {
-    return (
-        <Typography className={classes.username} onClick={() => handleEditing()}>{username}</Typography>
-    );
-  }
-};
-
-function ProfileCard({ classes, user, username, isEditing, handleChange, handleSubmit, handleEditing }) {
+function ProfileCard({
+  classes,
+  user,
+  username,
+  isEditing,
+  handleChange,
+  handleSubmit,
+  handleEditing
+}) {
   return (
     <Card className={classes.container}>
       <div className={classes.cover}>
@@ -53,13 +46,17 @@ function ProfileCard({ classes, user, username, isEditing, handleChange, handleS
             <Typography className={classes.followersDetails}>
               Seguindo
             </Typography>
-            <Typography className={classes.followersMetrics}>{user.following}</Typography>
+            <Typography className={classes.followersMetrics}>
+              {user.following}
+            </Typography>
           </div>
           <div style={{ display: "block", cursor: "pointer" }}>
             <Typography className={classes.followersDetails}>
               Seguidores
             </Typography>
-            <Typography className={classes.followersMetrics}>{user.followers}</Typography>
+            <Typography className={classes.followersMetrics}>
+              {user.followers}
+            </Typography>
           </div>
         </div>
       </div>
@@ -80,3 +77,40 @@ ProfileCard.propTypes = {
 ProfileCard.displayName = "ProfileCard";
 
 export const ProfileCardComponent = withStyles(styles)(ProfileCard);
+
+const UserPlaceHolder = ({
+  isEditing,
+  username,
+  classes,
+  handleChange,
+  handleSubmit,
+  handleEditing
+}) => {
+  if (isEditing) {
+    return (
+      <Fragment>
+        <input
+          type="text"
+          value={username}
+          onChange={event => handleChange(event.target.value)}
+        />
+        <button onClick={() => handleSubmit()}>Ok</button>
+      </Fragment>
+    );
+  } else {
+    return (
+      <Typography className={classes.username} onClick={() => handleEditing()}>
+        {username}
+      </Typography>
+    );
+  }
+};
+
+UserPlaceHolder.propTypes = {
+  classes: PropTypes.object.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleEditing: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  isEditing: PropTypes.bool.isRequired,
+  username: PropTypes.string.isRequired
+};

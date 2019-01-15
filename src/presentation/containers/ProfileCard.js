@@ -20,16 +20,17 @@ class ProfileCardContainer extends Component {
     this.props.changeUsername(newUsername);
     this.setState({
       isEditing: false
-    })
+    });
   };
   handleEditing = () => {
     this.setState({
       isEditing: true
-    })
+    });
   };
   render() {
     const { user } = this.props;
     const { isEditing, username } = this.state;
+    console.log(this.props.user.username);
     return (
       <ProfileCardComponent
         user={user}
@@ -51,13 +52,18 @@ const mapDispatchToProps = {
   changeUsername: updateUsernameAction
 };
 
+ProfileCardContainer.propTypes = {
+  isEditing: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    handle: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    following: PropTypes.number.isRequired
+  }),
+  changeUsername: PropTypes.func.isRequired
+};
+
 export const ProfileCard = connect(
   mapStateToProps,
   mapDispatchToProps
 )(ProfileCardContainer);
-
-ProfileCardContainer.propTypes = {
-  isEditing: PropTypes.bool.isRequired,
-  user: PropTypes.object.isRequired,
-  changeUsername: PropTypes.func.isRequired
-};
