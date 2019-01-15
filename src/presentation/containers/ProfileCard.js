@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 class ProfileCardContainer extends Component {
   state = {
     isEditing: false,
-    username: this.props.user.username
+    username: this.props.user
   };
   handleChange = username => {
     this.setState({ username });
