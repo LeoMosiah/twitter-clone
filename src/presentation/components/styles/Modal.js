@@ -2,7 +2,7 @@ export const styles = {
   container: {
     position: "absolute",
     width: 600,
-    top: "20%",
+    top: "35%",
     left: "50%",
     transform: "translate(-50%,-50%)",
     backgroundColor: "",
@@ -10,10 +10,15 @@ export const styles = {
   },
   header: {
     display: "block",
-    background: "#fff"
+    background: "#fff",
   },
   title: {
     fontWeight: "bold"
+  },
+  closeButton:{
+    position: "absolute",
+    top: "2%",
+    left: "95%",
   },
   content: {
     backgroundColor: "rgba(29,161,242,0.1)",
