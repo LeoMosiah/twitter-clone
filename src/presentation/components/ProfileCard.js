@@ -70,7 +70,12 @@ function ProfileCard({ classes, user, username, isEditing, handleChange, handleS
 
 ProfileCard.propTypes = {
   classes: PropTypes.object.isRequired,
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  isEditing: PropTypes.bool.isRequired,
+  username: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  handleEditing: PropTypes.func.isRequired
 };
 
 ProfileCard.displayName = "ProfileCard";

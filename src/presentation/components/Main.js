@@ -4,7 +4,7 @@ import { withStyles } from "@material-ui/core";
 import { styles } from "./styles/Main";
 import { FollowSugestionCard } from "./FollowSugestionCard";
 import { Timeline } from "../containers/Timeline";
-import { ProfileCard } from "../containers/ProfileCard";
+import { ProfileCard } from '../containers/ProfileCard';
 
 function MainComponent({ classes }) {
   return (

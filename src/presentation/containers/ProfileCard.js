@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { ProfileCardComponent } from "../components/ProfileCard";
 import {
   updateUsernameAction,
@@ -53,3 +54,9 @@ export const ProfileCard = connect(
   mapStateToProps,
   mapDispatchToProps
 )(ProfileCardContainer);
+
+ProfileCardContainer.propTypes = {
+  isEditing: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
+  changeUsername: PropTypes.func.isRequired
+};
