@@ -22,7 +22,7 @@ const UserPlaceHolder = ({ isEditing, username, classe, handleChange, handleSubm
   }
 };
 
-function ProfileCard({ classes, user, isEditing, handleChange, handleSubmit, handleEditing }) {
+function ProfileCard({ classes, user, username, isEditing, handleChange, handleSubmit, handleEditing }) {
   return (
     <Card className={classes.container}>
       <div className={classes.cover}>
@@ -36,7 +36,7 @@ function ProfileCard({ classes, user, isEditing, handleChange, handleSubmit, han
         <div className={classes.contactInfo}>
           <UserPlaceHolder
             isEditing={isEditing}
-            username={user.username}
+            username={username}
             classe={classes.username}
             handleChange={handleChange}
             handleSubmit={handleSubmit}

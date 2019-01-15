@@ -23,7 +23,7 @@ describe("User Reducer", function() {
     );
   });
 
-  it("should update user informations on the store", function() {
+  it("should update user username on the store", function() {
     const initialState = {
       handle: "handle",
       username: "username",
@@ -31,8 +31,7 @@ describe("User Reducer", function() {
       following: "1"
     };
 
-    const newUsername = "new username"
-  
+    const newUsername = "new username";
 
     const expectedState = {
       handle: "handle",
