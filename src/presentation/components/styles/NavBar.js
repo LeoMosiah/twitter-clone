@@ -8,7 +8,11 @@ export const styles = theme => ({
   },
   accountIcon: {
     fontSize: 30,
-    flex: 2
+    flex: 2,
+    color: "inherit",
+    backgroundColor: "transparent",
+    width: "20px",
+    height: "20px"
   },
   button: {
     color: "#fff",

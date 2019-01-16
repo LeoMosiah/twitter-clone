@@ -14,7 +14,11 @@ export const styles = {
     justifyContent: "space-between"
   },
   avatar: {
-    paddingTop: 4
+    paddingTop: 4,
+    color: "inherit",
+    backgroundColor: "transparent",
+    width: "24px",
+    height: "24px"
   },
   form: {
     paddingLeft: 10,
