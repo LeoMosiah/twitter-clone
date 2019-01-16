@@ -1,11 +1,12 @@
 import { fade } from "@material-ui/core/styles/colorManipulator";
+import React from 'react';
 
 export const styles = theme => ({
   header:{
-    flexDirection: "row"
+    position: "static",
+    color :"inherit"
   },
   navBarContainer: {
-    minHeight: 45,
     paddingLeft: 30,
     paddingRight: 30,
   },
@@ -26,7 +27,6 @@ export const styles = theme => ({
     cursor: "pointer"
   },
   iconContainer: {
-    flex: 1,
     paddingTop: 10,
     display: "inline-flex",
     cursor: "pointer",
