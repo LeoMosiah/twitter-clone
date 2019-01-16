@@ -61,7 +61,8 @@ export const styles = theme => ({
     pointerEvents: "none",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    color: "#1da1f2"
   },
   inputRoot: {
     color: "inherit",
