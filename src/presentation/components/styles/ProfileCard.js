@@ -3,7 +3,6 @@ export const styles = {
     width: "290px",
     position: "relative",
     borderRadius: 0,
-    float: "left",
     marginRight: "10px",
     paddingBottom: "20px"
   },
