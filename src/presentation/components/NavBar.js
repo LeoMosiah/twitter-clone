@@ -1,8 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
-import SearchIcon from "@material-ui/icons/Search";
 import NotificationsOutlined from "@material-ui/icons/NotificationsOutlined";
 import EmailOutlined from "@material-ui/icons/EmailOutlined";
 import FlashOnOutlined from "@material-ui/icons/FlashOnOutlined";
@@ -12,8 +11,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import { ModalComponent } from "./Modal";
-import InputBase from "@material-ui/core/InputBase";
 import logo from "../assets/logo.png";
+import Grid from "@material-ui/core/Grid";
 
 function NavBar(props) {
   const {
@@ -27,48 +26,57 @@ function NavBar(props) {
     user
   } = props;
   return (
-    <header className={classes.header}>
-      <Toolbar className={classes.navBarContainer}>
-
-        <div className={classes.iconContainer}>
-          <HomeOutlined />
-          <Typography className={classes.iconName}>Home</Typography>
-        </div>
-        <div className={classes.iconContainer}>
-          <FlashOnOutlined />
-          <Typography className={classes.iconName}>Moments</Typography>
-        </div>
-        <div className={classes.iconContainer}>
-          <NotificationsOutlined />
-          <Typography className={classes.iconName}>Notifications</Typography>
-        </div>
-        <div className={classes.iconContainer}>
-          <EmailOutlined />
-          <Typography className={classes.iconName}>Messages</Typography>
-        </div>
-        <div >
-          <img className={classes.logoIcon} src={logo} alt="logo" />
-        </div>
-
-        <div className={classes.search}>
-          <div className={classes.searchIcon}>
-            <SearchIcon />
-          </div>
-          <InputBase
-            placeholder="Search…"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput
-            }}
-          />
-        </div>
-        <Avatar src={user.avatar} className={classes.accountIcon}>
-          <AccountCircle />
-        </Avatar>
-        <button className={classes.button} onClick={() => handleOpenModal()}>
-          Tweetar
-        </button>
-      </Toolbar>
+    <Fragment>
+      <header className={classes.header}>
+        <Toolbar className={classes.navBarContainer}>
+          <Grid
+            container
+            spacing={24}
+            direction="row"
+            alignItems="center"
+            justify="space-evenly"
+          >
+            <Grid item>
+              <div className={classes.iconContainer}>
+                <HomeOutlined />
+                <Typography className={classes.iconName}>Home</Typography>
+              </div>
+              <div className={classes.iconContainer}>
+                <FlashOnOutlined />
+                <Typography className={classes.iconName}>Moments</Typography>
+              </div>
+              <div className={classes.iconContainer}>
+                <NotificationsOutlined />
+                <Typography className={classes.iconName}>
+                  Notifications
+                </Typography>
+              </div>
+              <div className={classes.iconContainer}>
+                <EmailOutlined />
+                <Typography className={classes.iconName}>Messages</Typography>
+              </div>
+            </Grid>
+            <Grid item>
+              <div className={classes.logoContainer}>
+                <img className={classes.logoIcon} src={logo} alt="logo" />
+              </div>
+            </Grid>
+            <Grid item>
+              <Avatar src={user.avatar} className={classes.accountIcon}>
+                <AccountCircle />
+              </Avatar>
+            </Grid>
+            <Grid item>
+              <button
+                className={classes.button}
+                onClick={() => handleOpenModal()}
+              >
+                Tweetar
+              </button>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </header>
       <ModalComponent
         isModalOpen={isModalOpen}
         handleCloseModal={handleCloseModal}
@@ -76,7 +84,7 @@ function NavBar(props) {
         body={body}
         handleChange={handleChange}
       />
-    </header>
+    </Fragment>
   );
 }
 
