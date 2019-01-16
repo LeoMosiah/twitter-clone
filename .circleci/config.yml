@@ -30,3 +30,7 @@ jobs:
       - run:
           name: "Deploy Hosting"
           command: make hosting
+
+      - run:
+          name: "Deploy Functions"
+          command: make functions
