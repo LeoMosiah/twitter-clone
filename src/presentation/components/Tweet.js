@@ -9,10 +9,12 @@ import { formateTimestamp } from "../../domain/useCases/dateControler";
 import FavoriteBorderOutlined from "@material-ui/icons/FavoriteBorderOutlined";
 import ModeCommentOutlined from "@material-ui/icons/ModeCommentOutlined";
 
-function TweetComponent({ author, body, timestamp, classes }) {
+function TweetComponent({ author, body, timestamp, classes, avatar }) {
   return (
     <Card className={classes.tweetCard}>
-      <Avatar className={classes.tweetCardAvatar}>{author[0]}</Avatar>
+      <Avatar src={avatar} className={classes.tweetCardAvatar}>
+        {author[0]}
+      </Avatar>
       <div className={classes.tweetCardInfo}>
         <div className={classes.tweetCardHeader}>
           <Typography>{author}</Typography>

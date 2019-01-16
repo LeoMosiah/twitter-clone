@@ -8,50 +8,58 @@ import Avatar from "@material-ui/core/Avatar";
 import uiFacesFemale from "../assets/uiFacesFemale.jpg";
 import uiFacesMale from "../assets/uiFacesMale.jpg";
 import uiFacesMale2 from "../assets/uiFacesMale2.jpg";
-import Grid from '@material-ui/core/Grid';
+import Grid from "@material-ui/core/Grid";
 
 function FollowSugestionComponent({ classes }) {
   return (
     <Grid item>
-    <Card className={classes.container}>
-      <div className={classes.header}>
-        <Typography variant="h3" className={classes.title}>
-          Quem seguir
-        </Typography>
-        <span className={classes.link}>Atualizar</span>
-        <span className={classes.link}>Ver todos</span>
-      </div>
-      <div className={classes.toFollow}>
-        <div className={classes.avatarContainer}>
-          <Avatar alt="Avatar" className={classes.avatar} src={uiFacesFemale} />
+      <Card className={classes.container}>
+        <div className={classes.header}>
+          <Typography variant="h3" className={classes.title}>
+            Quem seguir
+          </Typography>
+          <span className={classes.link}>Atualizar</span>
+          <span className={classes.link}>Ver todos</span>
         </div>
-        <div className={classes.infoContainer}>
-          <span className={classes.username}>Username</span>
-          <span className={classes.handle}>@username</span>
-          <button className={classes.button}>Seguir</button>
+        <div className={classes.toFollow}>
+          <div className={classes.avatarContainer}>
+            <Avatar
+              alt="Avatar"
+              className={classes.avatar}
+              src={uiFacesFemale}
+            />
+          </div>
+          <div className={classes.infoContainer}>
+            <span className={classes.username}>Camila</span>
+            <span className={classes.handle}>@ucamila</span>
+            <button className={classes.button}>Seguir</button>
+          </div>
         </div>
-      </div>
-      <div className={classes.toFollow}>
-        <div className={classes.avatarContainer}>
-          <Avatar alt="Avatar" className={classes.avatar} src={uiFacesMale} />
+        <div className={classes.toFollow}>
+          <div className={classes.avatarContainer}>
+            <Avatar alt="Avatar" className={classes.avatar} src={uiFacesMale} />
+          </div>
+          <div className={classes.infoContainer}>
+            <span className={classes.username}>Luiz Herinque</span>
+            <span className={classes.handle}>@luizherinque</span>
+            <button className={classes.button}>Seguir</button>
+          </div>
         </div>
-        <div className={classes.infoContainer}>
-          <span className={classes.username}>Username</span>
-          <span className={classes.handle}>@username</span>
-          <button className={classes.button}>Seguir</button>
+        <div className={classes.toFollow}>
+          <div className={classes.avatarContainer}>
+            <Avatar
+              alt="Avatar"
+              className={classes.avatar}
+              src={uiFacesMale2}
+            />
+          </div>
+          <div className={classes.infoContainer}>
+            <span className={classes.username}>Pablo Victor</span>
+            <span className={classes.handle}>@pablovictor</span>
+            <button className={classes.button}>Seguir</button>
+          </div>
         </div>
-      </div>
-      <div className={classes.toFollow}>
-        <div className={classes.avatarContainer}>
-          <Avatar alt="Avatar" className={classes.avatar} src={uiFacesMale2} />
-        </div>
-        <div className={classes.infoContainer}>
-          <span className={classes.username}>Username</span>
-          <span className={classes.handle}>@username</span>
-          <button className={classes.button}>Seguir</button>
-        </div>
-      </div>
-    </Card>
+      </Card>
     </Grid>
   );
 }
