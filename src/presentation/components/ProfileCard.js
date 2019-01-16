@@ -19,12 +19,29 @@ function ProfileCard({
 }) {
   return (
     <Card className={classes.container}>
-      <div className={classes.cover}>
-        <div className={classes.avatarContainer}>
-          <Avatar className={classes.avatar} onClick={() => alert("got click")}>
+      <div className={classes.avatarContainer}>
+        <input
+          className={classes.imageUploader}
+          type="file"
+          id="avatarInput"
+          onChange={event => handleChangeImage(event)}
+        />
+        <label for="avatarInput">
+          <Avatar className={classes.avatar}>
             <AddAPhotoOutlined className={classes.icon} />
           </Avatar>
-        </div>
+        </label>
+      </div>
+      <div>
+        <input
+          className={classes.imageUploader}
+          type="file"
+          id="coverInput"
+          onChange={event => handleChangeImage(event)}
+        />
+        <label for="coverInput">
+          <div className={classes.cover} />
+        </label>
       </div>
       <div className={classes.userInfo}>
         <div className={classes.contactInfo}>

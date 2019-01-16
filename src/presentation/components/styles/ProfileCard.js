@@ -9,7 +9,8 @@ export const styles = {
   },
   cover: {
     backgroundColor: "#1da1f2",
-    height: 95
+    height: 95,
+    cursor: "pointer"
   },
   avatarContainer: {
     height: 90,
@@ -20,6 +21,9 @@ export const styles = {
     transform: "translate(-50%, -50%)",
     borderRadius: "100px",
     backgroundColor: "#fff"
+  },
+  imageUploader: {
+    display: "none"
   },
   avatar: {
     height: 80,
