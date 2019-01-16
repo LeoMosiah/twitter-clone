@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ProfileCardComponent } from "../components/ProfileCard";
 import {
+  updateAvatarAction, updateCoverAction,
   updateUsernameAction,
   userSelector
-} from "../../domain/redux/ducks/userReducer";
+} from '../../domain/redux/ducks/userReducer';
 import { connect } from "react-redux";
 import { User } from "../../domain/entities/user";
 
@@ -83,7 +84,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  changeUsername: updateUsernameAction
+  changeUsername: updateUsernameAction,
+  changeAvatar: updateAvatarAction,
+  changeCover: updateCoverAction
 };
 
 ProfileCardContainer.propTypes = {

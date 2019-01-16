@@ -23,5 +23,7 @@ export const mockedUser = {
   username: "LeoMosiah",
   handle: "@leomosiah",
   followers: 8,
-  following: 25
+  following: 25,
+  cover: "",
+  avatar:""
 };
