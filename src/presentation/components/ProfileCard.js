@@ -18,8 +18,6 @@ function ProfileCard({
   handleEditing,
   handleChangeAvatar,
   handleChangeCover,
-  avatarUrl,
-  coverUrl
 }) {
   return (
     <Grid item>
@@ -32,7 +30,7 @@ function ProfileCard({
           onChange={event => handleChangeAvatar(event)}
         />
         <label for="avatarInput">
-          <Avatar className={classes.avatar} src={avatarUrl}>
+          <Avatar className={classes.avatar} src={user.avatar}>
             <AddAPhotoOutlined className={classes.icon} />
           </Avatar>
         </label>
@@ -45,7 +43,7 @@ function ProfileCard({
           onChange={event => handleChangeCover(event)}
         />
         <label for="coverInput">
-          <div className={classes.cover} style={{backgroundImage: `url(${coverUrl})`}}/>
+          <div className={classes.cover} style={{backgroundImage: `url(${user.cover})`}}/>
         </label>
       </div>
       <div className={classes.userInfo}>

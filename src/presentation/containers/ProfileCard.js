@@ -12,10 +12,6 @@ import { User } from "../../domain/entities/user";
 class ProfileCardContainer extends Component {
   state = {
     isEditing: false,
-    avatarFile: "",
-    avatarUrl: "",
-    coverFile: "",
-    coverUrl: ""
   };
   handleChange = username => {
     this.props.changeUsername(username);
@@ -37,10 +33,7 @@ class ProfileCardContainer extends Component {
     let file = event.target.files[0];
 
     reader.onloadend = () => {
-      this.setState({
-        avatarFile: file,
-        avatarUrl: reader.result
-      });
+      this.props.changeAvatar(reader.result)
     };
 
     reader.readAsDataURL(file);
@@ -51,10 +44,7 @@ class ProfileCardContainer extends Component {
     let file = event.target.files[0];
 
     reader.onloadend = () => {
-      this.setState({
-        coverFile: file,
-        coverUrl: reader.result
-      });
+      this.props.changeCover(reader.result)
     };
 
     reader.readAsDataURL(file);

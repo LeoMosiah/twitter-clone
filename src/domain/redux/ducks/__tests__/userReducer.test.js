@@ -91,7 +91,7 @@ describe("User Reducer", function() {
       username: "username",
       followers: "1",
       following: "1",
-      cover: "new avatar"
+      cover: "new cover"
     };
 
     expect(userReducer(initialState, updateCoverAction(newCover))).toEqual(
