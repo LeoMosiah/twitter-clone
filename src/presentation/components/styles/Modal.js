@@ -10,18 +10,20 @@ export const styles = {
   },
   header: {
     display: "block",
-    background: "#fff",
+    background: "#fff"
   },
   title: {
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginTop: "10px"
   },
-  closeButton:{
+  closeButton: {
     position: "absolute",
-    top: "2%",
-    left: "95%",
+    top: "10px",
+    left: "570px",
     color: "#777",
     fontSize: "24px",
-    lineHeight: "18px"
+    lineHeight: "18px",
+    cursor: "pointer"
   },
   content: {
     backgroundColor: "rgba(29,161,242,0.1)",
@@ -29,16 +31,24 @@ export const styles = {
     paddingBottom: 10
   },
   formContainer: {
-    width: 500,
-    padding: 50
+    padding: "15px"
   },
   form: {
-    border: "1px solid black",
+    border: "1px solid #e6ecf0",
     color: "#1da1f2",
+    backgroundColor: "#fff",
     padding: "10px",
-    width: "500px",
-    height: "300px",
+    width: "575px",
+    height: "100px",
     resize: "none",
+    borderRadius: "10px"
+  },
+  footer: {
+    display: "block",
+    position: "relative",
+    textAlign: "right",
+    marginTop: "-10px",
+    marginRight: "10px"
   },
   button: {
     color: "#fff",
@@ -50,11 +60,6 @@ export const styles = {
     fontWeight: "bold",
     lineHeight: "20px",
     padding: "6px 16px",
-    cursor: "pointer",
-    position: "absolute",
-    top: "80%",
-    left: "80%"
+    cursor: "pointer"
   }
 };
-
-//rgba(29,161,242,0.1)

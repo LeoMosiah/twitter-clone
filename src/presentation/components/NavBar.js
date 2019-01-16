@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
+import SearchIcon from "@material-ui/icons/Search";
 import NotificationsOutlined from "@material-ui/icons/NotificationsOutlined";
 import EmailOutlined from "@material-ui/icons/EmailOutlined";
 import FlashOnOutlined from "@material-ui/icons/FlashOnOutlined";
@@ -11,6 +12,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import { ModalComponent } from "./Modal";
+import InputBase from "@material-ui/core/InputBase";
+import logo from "../assets/logo.png";
 
 function NavBar(props) {
   const {
@@ -40,6 +43,21 @@ function NavBar(props) {
         <div className={classes.iconContainer}>
           <EmailOutlined />
           <Typography className={classes.iconName}>Messages</Typography>
+        </div>
+        <div className={classes.logo}>
+          <img className={classes.logoIcon} src={logo} alt="logo" />
+        </div>
+        <div className={classes.search}>
+          <div className={classes.searchIcon}>
+            <SearchIcon />
+          </div>
+          <InputBase
+            placeholder="Search…"
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput
+            }}
+          />
         </div>
         <AccountCircle className={classes.accountIcon} />
         <button className={classes.button} onClick={() => handleOpenModal()}>

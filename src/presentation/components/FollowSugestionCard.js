@@ -5,6 +5,9 @@ import { styles } from "./styles/FollowSugestionCard";
 import { withStyles } from "@material-ui/core";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import Avatar from "@material-ui/core/Avatar";
+import uiFacesFemale from "../assets/uiFacesFemale.jpg";
+import uiFacesMale from "../assets/uiFacesMale.jpg";
+import uiFacesMale2 from "../assets/uiFacesMale2.jpg";
 
 function FollowSugestionComponent({ classes }) {
   return (
@@ -18,7 +21,7 @@ function FollowSugestionComponent({ classes }) {
       </div>
       <div className={classes.toFollow}>
         <div className={classes.avatarContainer}>
-          <Avatar alt="Avatar" className={classes.avatar} />
+          <Avatar alt="Avatar" className={classes.avatar} src={uiFacesFemale} />
         </div>
         <div className={classes.infoContainer}>
           <span className={classes.username}>Username</span>
@@ -28,7 +31,7 @@ function FollowSugestionComponent({ classes }) {
       </div>
       <div className={classes.toFollow}>
         <div className={classes.avatarContainer}>
-          <Avatar alt="Avatar" className={classes.avatar} />
+          <Avatar alt="Avatar" className={classes.avatar} src={uiFacesMale} />
         </div>
         <div className={classes.infoContainer}>
           <span className={classes.username}>Username</span>
@@ -38,7 +41,7 @@ function FollowSugestionComponent({ classes }) {
       </div>
       <div className={classes.toFollow}>
         <div className={classes.avatarContainer}>
-          <Avatar alt="Avatar" className={classes.avatar} />
+          <Avatar alt="Avatar" className={classes.avatar} src={uiFacesMale2} />
         </div>
         <div className={classes.infoContainer}>
           <span className={classes.username}>Username</span>
@@ -51,7 +54,7 @@ function FollowSugestionComponent({ classes }) {
 }
 
 FollowSugestionComponent.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 FollowSugestionComponent.displayName = "FollowSugestion";

@@ -14,7 +14,8 @@ function ProfileCard({
   isEditing,
   handleChange,
   handleSubmit,
-  handleEditing
+  handleEditing,
+  handleChangeImage
 }) {
   return (
     <Card className={classes.container}>

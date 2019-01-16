@@ -23,7 +23,7 @@ export const styles = {
     paddingBottom: "10px",
     paddingTop: "10px",
     overflow: "auto",
-    borderBottom: "1px solid #657786"
+    borderBottom: "1px solid #e6ecf0"
   },
   avatarContainer: {
     float: "left",
