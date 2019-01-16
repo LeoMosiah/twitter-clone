@@ -13,7 +13,7 @@ function MainComponent({ classes }) {
       className={classes.container}
       container
       spacing={16}
-      alignItems="center"
+      alignItems="flex-start"
       direction="row"
       justify="space-evenly"
     >
