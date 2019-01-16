@@ -12,7 +12,9 @@ class ProfileCardContainer extends Component {
   state = {
     isEditing: false,
     avatarFile: "",
-    avatarUrl: ""
+    avatarUrl: "",
+    coverFile: "",
+    coverUrl: ""
   };
   handleChange = username => {
     this.props.changeUsername(username);
@@ -28,23 +30,37 @@ class ProfileCardContainer extends Component {
       isEditing: true
     });
   };
-  handleChangeImage = event => {
+  handleChangeAvatar = event => {
     event.preventDefault();
     let reader = new FileReader();
-    let avatarFile = event.target.files[0];
+    let file = event.target.files[0];
 
     reader.onloadend = () => {
       this.setState({
-        avatarFile,
+        avatarFile: file,
         avatarUrl: reader.result
       });
     };
 
-    reader.readAsDataURL(avatarFile);
+    reader.readAsDataURL(file);
+  };
+  handleChangeCover = event => {
+    event.preventDefault();
+    let reader = new FileReader();
+    let file = event.target.files[0];
+
+    reader.onloadend = () => {
+      this.setState({
+        coverFile: file,
+        coverUrl: reader.result
+      });
+    };
+
+    reader.readAsDataURL(file);
   };
   render() {
     const { user } = this.props;
-    const { isEditing, avatarFile, avatarUrl } = this.state;
+    const { isEditing, avatarUrl, coverUrl } = this.state;
     return (
       <ProfileCardComponent
         user={user}
@@ -53,9 +69,10 @@ class ProfileCardContainer extends Component {
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
         handleEditing={this.handleEditing}
-        handleChangeImage={this.handleChangeImage}
+        handleChangeAvatar={this.handleChangeAvatar}
         avatarUrl={avatarUrl}
-        avatarFile={avatarFile}
+        handleChangeCover={this.handleChangeCover}
+        coverUrl={coverUrl}
       />
     );
   }

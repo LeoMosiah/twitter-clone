@@ -15,7 +15,10 @@ function ProfileCard({
   handleChange,
   handleSubmit,
   handleEditing,
-  handleChangeImage
+  handleChangeAvatar,
+  handleChangeCover,
+  avatarUrl,
+  coverUrl
 }) {
   return (
     <Card className={classes.container}>
@@ -24,10 +27,10 @@ function ProfileCard({
           className={classes.imageUploader}
           type="file"
           id="avatarInput"
-          onChange={event => handleChangeImage(event)}
+          onChange={event => handleChangeAvatar(event)}
         />
         <label for="avatarInput">
-          <Avatar className={classes.avatar}>
+          <Avatar className={classes.avatar} src={avatarUrl}>
             <AddAPhotoOutlined className={classes.icon} />
           </Avatar>
         </label>
@@ -37,10 +40,12 @@ function ProfileCard({
           className={classes.imageUploader}
           type="file"
           id="coverInput"
-          onChange={event => handleChangeImage(event)}
+          onChange={event => handleChangeCover(event)}
         />
         <label for="coverInput">
-          <div className={classes.cover} />
+          <div className={classes.cover}>
+            <img src={coverUrl} />
+          </div>
         </label>
       </div>
       <div className={classes.userInfo}>
