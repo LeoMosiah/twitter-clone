@@ -28,5 +28,5 @@ jobs:
           command: npm run test
 
       - run:
-          name: "Deploy app"
-          command: make deploy
+          name: "Deploy Hosting"
+          command: make deploy-hosting
