@@ -3,10 +3,8 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 export const styles = theme => ({
   navBarContainer: {
     minHeight: 45,
-    display: "flex",
     paddingLeft: 30,
     paddingRight: 30,
-    justifyContent: "space-between"
   },
   accountIcon: {
     fontSize: 30,
