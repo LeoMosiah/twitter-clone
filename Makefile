@@ -1,8 +1,5 @@
 install:
 	npm install
-	cd functions
-	npm install
-	cd ../
 
 deploy:
 	npm run build
