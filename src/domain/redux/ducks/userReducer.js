@@ -24,7 +24,7 @@ export const updateAvatarAction = avatar => ({
 });
 
 export const updateCoverAction = cover => ({
-  type: UPDATE_USERNAME,
+  type: UPDATE_COVER,
   cover
 });
 
