@@ -1,6 +1,9 @@
 import { fade } from "@material-ui/core/styles/colorManipulator";
 
 export const styles = theme => ({
+  header:{
+    flexDirection: "row"
+  },
   navBarContainer: {
     minHeight: 45,
     paddingLeft: 30,
@@ -82,7 +85,6 @@ export const styles = theme => ({
       }
     }
   },
-  logo: {},
   logoIcon: {
     paddingTop: "5px",
     marginRight: "10px",

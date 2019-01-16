@@ -28,7 +28,7 @@ function NavBar(props) {
     user
   } = props;
   return (
-    <AppBar position="static" color="inherit">
+    <AppBar position="static" color="inherit" className={classes.header}>
       <Toolbar className={classes.navBarContainer}>
         <div className={classes.iconContainer}>
           <HomeOutlined />
