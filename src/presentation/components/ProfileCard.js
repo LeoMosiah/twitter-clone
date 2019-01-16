@@ -44,7 +44,7 @@ function ProfileCard({
         />
         <label for="coverInput">
           <div className={classes.cover}>
-            <img src={coverUrl} />
+            <img src={coverUrl} alt="cover" />
           </div>
         </label>
       </div>
