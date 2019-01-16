@@ -7,7 +7,6 @@ import NotificationsOutlined from "@material-ui/icons/NotificationsOutlined";
 import EmailOutlined from "@material-ui/icons/EmailOutlined";
 import FlashOnOutlined from "@material-ui/icons/FlashOnOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
-import AppBar from "@material-ui/core/AppBar";
 import Avatar from "@material-ui/core/Avatar";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";

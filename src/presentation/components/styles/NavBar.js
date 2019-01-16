@@ -1,5 +1,4 @@
 import { fade } from "@material-ui/core/styles/colorManipulator";
-import React from 'react';
 
 export const styles = theme => ({
   header:{
