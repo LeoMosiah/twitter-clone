@@ -9,7 +9,8 @@ export const styles = {
   cover: {
     backgroundColor: "#1da1f2",
     height: 95,
-    cursor: "pointer"
+    cursor: "pointer",
+    backgroundSize: "cover"
   },
   avatarContainer: {
     height: 90,
