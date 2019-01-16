@@ -29,7 +29,7 @@ function NavBar(props) {
   return (
     <header className={classes.header}>
       <Toolbar className={classes.navBarContainer}>
-        <div className={classes.left}>
+
         <div className={classes.iconContainer}>
           <HomeOutlined />
           <Typography className={classes.iconName}>Home</Typography>
@@ -46,11 +46,10 @@ function NavBar(props) {
           <EmailOutlined />
           <Typography className={classes.iconName}>Messages</Typography>
         </div>
-        </div>
-        <div className={classes.middle}>
+        <div >
           <img className={classes.logoIcon} src={logo} alt="logo" />
         </div>
-        <div className={classes.right}>
+
         <div className={classes.search}>
           <div className={classes.searchIcon}>
             <SearchIcon />
@@ -69,7 +68,6 @@ function NavBar(props) {
         <button className={classes.button} onClick={() => handleOpenModal()}>
           Tweetar
         </button>
-        </div>
       </Toolbar>
       <ModalComponent
         isModalOpen={isModalOpen}

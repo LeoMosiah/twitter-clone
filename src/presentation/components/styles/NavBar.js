@@ -9,15 +9,6 @@ export const styles = theme => ({
     paddingLeft: 30,
     paddingRight: 30,
   },
-  left:{
-    marginRight: "50px"
-  },
-  middle:{
-    marginRight: "50px"
-  },
-  right:{
-    marginRight: "50px"
-  },
   accountIcon: {
     color: "inherit",
     backgroundColor: "transparent",
