@@ -45,9 +45,7 @@ function ProfileCard({
           onChange={event => handleChangeCover(event)}
         />
         <label for="coverInput">
-          <div className={classes.cover}>
-            <img src={coverUrl} alt="cover" />
-          </div>
+          <div className={classes.cover} style={{backgroundImage: `url(${coverUrl})`}}/>
         </label>
       </div>
       <div className={classes.userInfo}>
