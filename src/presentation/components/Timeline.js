@@ -8,12 +8,12 @@ import Grid from '@material-ui/core/Grid';
 import { Tweet } from "./Tweet";
 import Avatar from "@material-ui/core/Avatar";
 
-function Timeline({ classes, tweets, handleSubmit, body, handleChange }) {
+function Timeline({ classes, tweets, handleSubmit, body, handleChange, user }) {
   return (
     <Grid item>
     <Card className={classes.container}>
       <div className={classes.header}>
-        <Avatar src="" className={classes.avatar} >
+        <Avatar src={user.avatar} className={classes.avatar} >
           <AccountCircle />
         </Avatar>
         <input

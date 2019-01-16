@@ -51,7 +51,7 @@ class ProfileCardContainer extends Component {
   };
   render() {
     const { user } = this.props;
-    const { isEditing, avatarUrl, coverUrl } = this.state;
+    const { isEditing } = this.state;
     return (
       <ProfileCardComponent
         user={user}
@@ -61,9 +61,7 @@ class ProfileCardContainer extends Component {
         handleSubmit={this.handleSubmit}
         handleEditing={this.handleEditing}
         handleChangeAvatar={this.handleChangeAvatar}
-        avatarUrl={avatarUrl}
         handleChangeCover={this.handleChangeCover}
-        coverUrl={coverUrl}
       />
     );
   }

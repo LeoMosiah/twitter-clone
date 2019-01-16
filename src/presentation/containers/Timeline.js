@@ -25,13 +25,14 @@ class TimelineContainer extends Component {
   };
   render() {
     const { body } = this.state;
-    const { tweets } = this.props;
+    const { tweets, user } = this.props;
     return (
       <TimelineComponent
         tweets={tweets}
         body={body}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        user={user}
       />
     );
   }

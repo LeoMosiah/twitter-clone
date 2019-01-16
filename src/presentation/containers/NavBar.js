@@ -33,6 +33,7 @@ class NavBarContainer extends Component {
   };
   render() {
     const { body, isModalOpen } = this.state;
+    const { user } = this.props
     return (
       <NavBarComponent
         body={body}
@@ -41,6 +42,7 @@ class NavBarContainer extends Component {
         handleSubmit={this.handleSubmit}
         handleOpenModal={this.handleOpenModal}
         handleCloseModal={this.handleCloseModal}
+        user={user}
       />
     );
   }

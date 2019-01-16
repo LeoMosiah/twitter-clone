@@ -24,7 +24,8 @@ function NavBar(props) {
     body,
     isModalOpen,
     handleCloseModal,
-    handleOpenModal
+    handleOpenModal,
+    user
   } = props;
   return (
     <AppBar position="static" color="inherit">
@@ -60,7 +61,7 @@ function NavBar(props) {
             }}
           />
         </div>
-        <Avatar src="" className={classes.accountIcon}>
+        <Avatar src={user.avatar} className={classes.accountIcon}>
           <AccountCircle />
         </Avatar>
         <button className={classes.button} onClick={() => handleOpenModal()}>
