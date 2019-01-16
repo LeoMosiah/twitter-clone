@@ -5,14 +5,22 @@ import { styles } from "./styles/Main";
 import { FollowSugestionCard } from "./FollowSugestionCard";
 import { Timeline } from "../containers/Timeline";
 import { ProfileCard } from "../containers/ProfileCard";
+import Grid from '@material-ui/core/Grid';
 
 function MainComponent({ classes }) {
   return (
-    <main className={classes.container}>
+    <Grid
+      className={classes.container}
+      container
+      spacing={16}
+      alignItems="center"
+      direction="row"
+      justify="space-evenly"
+    >
       <ProfileCard />
       <Timeline />
       <FollowSugestionCard />
-    </main>
+    </Grid>
   );
 }
 

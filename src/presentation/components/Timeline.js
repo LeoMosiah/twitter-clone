@@ -4,10 +4,12 @@ import { styles } from "./styles/Timeline";
 import { withStyles } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Card from "@material-ui/core/Card";
+import Grid from '@material-ui/core/Grid';
 import { Tweet } from "./Tweet";
 
 function Timeline({ classes, tweets, handleSubmit, body, handleChange }) {
   return (
+    <Grid item>
     <Card className={classes.container}>
       <div className={classes.header}>
         <AccountCircle className={classes.avatar} />
@@ -30,6 +32,7 @@ function Timeline({ classes, tweets, handleSubmit, body, handleChange }) {
         />
       ))}
     </Card>
+    </Grid>
   );
 }
 

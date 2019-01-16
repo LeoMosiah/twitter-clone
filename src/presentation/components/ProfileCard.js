@@ -6,6 +6,7 @@ import { withStyles } from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 import AddAPhotoOutlined from "@material-ui/icons/AddAPhotoOutlined";
 import Typography from "@material-ui/core/Typography";
+import Grid from '@material-ui/core/Grid';
 
 function ProfileCard({
   classes,
@@ -21,6 +22,7 @@ function ProfileCard({
   coverUrl
 }) {
   return (
+    <Grid item>
     <Card className={classes.container}>
       <div className={classes.avatarContainer}>
         <input
@@ -84,6 +86,7 @@ function ProfileCard({
         </div>
       </div>
     </Card>
+    </Grid>
   );
 }
 

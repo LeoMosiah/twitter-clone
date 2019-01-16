@@ -8,9 +8,11 @@ import Avatar from "@material-ui/core/Avatar";
 import uiFacesFemale from "../assets/uiFacesFemale.jpg";
 import uiFacesMale from "../assets/uiFacesMale.jpg";
 import uiFacesMale2 from "../assets/uiFacesMale2.jpg";
+import Grid from '@material-ui/core/Grid';
 
 function FollowSugestionComponent({ classes }) {
   return (
+    <Grid item>
     <Card className={classes.container}>
       <div className={classes.header}>
         <Typography variant="h3" className={classes.title}>
@@ -50,6 +52,7 @@ function FollowSugestionComponent({ classes }) {
         </div>
       </div>
     </Card>
+    </Grid>
   );
 }
 
