@@ -8,6 +8,7 @@ import EmailOutlined from "@material-ui/icons/EmailOutlined";
 import FlashOnOutlined from "@material-ui/icons/FlashOnOutlined";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
+import Avatar from "@material-ui/core/Avatar";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
 import Typography from "@material-ui/core/es/Typography/Typography";
@@ -59,7 +60,9 @@ function NavBar(props) {
             }}
           />
         </div>
-        <AccountCircle className={classes.accountIcon} />
+        <Avatar src="" className={classes.accountIcon}>
+          <AccountCircle />
+        </Avatar>
         <button className={classes.button} onClick={() => handleOpenModal()}>
           Tweetar
         </button>

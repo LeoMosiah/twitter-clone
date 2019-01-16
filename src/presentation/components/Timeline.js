@@ -6,13 +6,16 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import Card from "@material-ui/core/Card";
 import Grid from '@material-ui/core/Grid';
 import { Tweet } from "./Tweet";
+import Avatar from "@material-ui/core/Avatar";
 
 function Timeline({ classes, tweets, handleSubmit, body, handleChange }) {
   return (
     <Grid item>
     <Card className={classes.container}>
       <div className={classes.header}>
-        <AccountCircle className={classes.avatar} />
+        <Avatar src="" className={classes.avatar} >
+          <AccountCircle />
+        </Avatar>
         <input
           type="text"
           placeholder="O que está acontecendo?"
