@@ -61,7 +61,6 @@ function NavBar(props) {
             </Grid>
             <Grid item>
               <Avatar src={user.avatar} className={classes.accountIcon}>
-                <AccountCircle />
               </Avatar>
               <input
                 type="text"

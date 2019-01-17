@@ -5,7 +5,7 @@ export const styles = {
   },
   navBarContainer: {
     position: "relative",
-    minHeight: "inherit"
+    minHeight: "55px"
   },
   accountIcon: {
     color: "inherit",
