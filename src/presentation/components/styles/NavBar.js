@@ -5,7 +5,6 @@ export const styles = {
   },
   navBarContainer: {
     position: "relative",
-    minHeight: "55px"
   },
   button: {
     color: "#fff",
