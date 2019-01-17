@@ -22,10 +22,10 @@ export const styles = {
     display: "inline-flex"
   },
   author:{
-    marginRight: "100px"
+    marginRight: "50px"
   },
   handle:{
-    marginRight: "100px"
+    marginRight: "50px"
   },
   timestamp:{
 
