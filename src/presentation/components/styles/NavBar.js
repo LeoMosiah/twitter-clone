@@ -42,5 +42,17 @@ export const styles = {
   logoIcon: {
     width: "30px",
     height: "30px"
+  },
+  input: {
+    border: "1px solid #e6ecf0",
+    borderRadius: "21px",
+    backgroundColor: "#f5f8fa",
+    height: "32px",
+    lineHeight: "16px",
+    fontSize: "12px",
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)"
   }
 };
