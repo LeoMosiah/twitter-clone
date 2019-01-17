@@ -36,7 +36,7 @@ npm start
 
 ## Test
 
-All tests are related to redux, run all tests executing the command.
+All tests are related to redux, run all tests executing the command:
 
 ```javascript
 npm test

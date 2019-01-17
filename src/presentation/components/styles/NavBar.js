@@ -41,7 +41,9 @@ export const styles = {
   avatar:{
     display: "inline-block",
     height: "30px",
-    width: "30px"
+    width: "30px",
+    backgroundColor: "#fff",
+    color: "#000"
   },
   accountIcon: {
     color: "inherit",
