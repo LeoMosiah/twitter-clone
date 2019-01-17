@@ -19,9 +19,9 @@ function TweetComponent({ author, body, timestamp, classes, avatar }) {
       </div>
       <div className={classes.rightColumn}>
         <div className={classes.tweetInfo}>
-          <Typography>{author}</Typography>
-          <Typography>{`@${author.toLowerCase()}`}</Typography>
-          <Typography>{formateTimestamp(timestamp)}</Typography>
+          <Typography classname={classes.author}>{author}</Typography>
+          <Typography classname={classes.handle}>{`@${author.toLowerCase()}`}</Typography>
+          <Typography classname={classes.timestamp}>{formateTimestamp(timestamp)}</Typography>
         </div>
         <div className={classes.body}>
           <Typography>{body}</Typography>

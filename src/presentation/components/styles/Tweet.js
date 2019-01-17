@@ -21,10 +21,18 @@ export const styles = {
   tweetInfo: {
     display: "inline-flex"
   },
+  author:{
+    marginRight: "10px"
+  },
+  handle:{
+    marginRight: "10px"
+  },
+  timestamp:{
+
+  },
   body:{
   },
   icons:{
     display: "inline-flex",
-    justifyContent: "space-between"
   }
 };
