@@ -51,17 +51,11 @@ export const styles = {
     transform: "translate(-50%,-50%)"
   },
   avatarContainer:{
-    height:"40px",
-    width: "40px"
+    display: "flex",
   },
   avatar:{
-    height:"40px",
-    width: "40px"
   },
   accountIcon: {
     color: "inherit",
-    backgroundColor: "transparent",
-    height:"40px",
-    width: "40px"
   }
 };
