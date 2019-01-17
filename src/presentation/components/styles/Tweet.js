@@ -7,12 +7,16 @@ export const styles = {
   },
   leftColumn:{
     flex: 1,
+    position:"relative"
   },
   avatar: {
-    margin: "0 auto"
+    position: "absolute",
+    top:"50%",
+    left:"50%",
+    transform: "translate(-50%,-50%)"
   },
   rightColumn:{
-    flex: 3
+    flex: 5
   },
   tweetInfo: {
   },
