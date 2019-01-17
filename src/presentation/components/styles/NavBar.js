@@ -45,17 +45,14 @@ export const styles = {
     lineHeight: "16px",
     paddingLeft: "10px",
     fontSize: "12px",
-    position: "relative",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%,-50%)"
   },
   avatarContainer:{
-    display: "flex",
   },
   avatar:{
   },
   accountIcon: {
     color: "inherit",
+    height: "inherit",
+    width: "inherit"
   }
 };
