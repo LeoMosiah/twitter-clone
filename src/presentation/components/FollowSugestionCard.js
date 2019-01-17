@@ -30,8 +30,9 @@ function FollowSugestionComponent({ classes }) {
             />
           </div>
           <div className={classes.infoContainer}>
+            <span className={classes.closeButton}>&times;</span>
             <span className={classes.username}>Camila</span>
-            <span className={classes.handle}>@ucamila</span>
+            <span className={classes.handle}>@camila</span>
             <button className={classes.button}>Seguir</button>
           </div>
         </div>
@@ -40,6 +41,7 @@ function FollowSugestionComponent({ classes }) {
             <Avatar alt="Avatar" className={classes.avatar} src={uiFacesMale} />
           </div>
           <div className={classes.infoContainer}>
+            <span className={classes.closeButton}>&times;</span>
             <span className={classes.username}>Luiz Herinque</span>
             <span className={classes.handle}>@luizherinque</span>
             <button className={classes.button}>Seguir</button>
@@ -54,6 +56,7 @@ function FollowSugestionComponent({ classes }) {
             />
           </div>
           <div className={classes.infoContainer}>
+            <span className={classes.closeButton}>&times;</span>
             <span className={classes.username}>Pablo Victor</span>
             <span className={classes.handle}>@pablovictor</span>
             <button className={classes.button}>Seguir</button>

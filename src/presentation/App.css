@@ -14,18 +14,20 @@ body,
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 ::placeholder {
-  color: rgb(29,161,242);
+  color: rgb(29, 161, 242);
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgb(29,161,242);
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(29, 161, 242);
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgb(29,161,242);
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(29, 161, 242);
 }

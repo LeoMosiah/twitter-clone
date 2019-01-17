@@ -1,14 +1,16 @@
-export const styles = theme => ({
+export const styles = {
   header: {
     position: "static",
     color: "inherit"
   },
   navBarContainer: {
-    position: "relative"
+    position: "relative",
+    minHeight: "inherit"
   },
   accountIcon: {
     color: "inherit",
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
+    display: "inline-flex"
   },
   button: {
     color: "#fff",
@@ -20,7 +22,8 @@ export const styles = theme => ({
     fontWeight: "bold",
     lineHeight: "20px",
     padding: "6px 16px",
-    cursor: "pointer"
+    cursor: "pointer",
+    marginBottom: "7px"
   },
   iconContainer: {
     marginRight: "20px",
@@ -36,9 +39,8 @@ export const styles = theme => ({
     paddingTop: 4,
     color: "inherit"
   },
-  logoContainer: {},
   logoIcon: {
     width: "30px",
     height: "30px"
   }
-});
+};

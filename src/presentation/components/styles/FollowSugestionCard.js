@@ -1,7 +1,7 @@
 export const styles = {
   container: {
     borderRadius: 0,
-    width: "290px",
+    width: "290px"
   },
   header: {
     padding: "10px"
@@ -11,11 +11,16 @@ export const styles = {
     fontWeight: "bold",
     display: "inline",
     lineHeight: "22px",
-    paddingRight: "20px"
+    paddingRight: "10px"
   },
   link: {
     fontSize: "12px",
-    paddingRight: "8px"
+    paddingRight: "8px",
+    color: "#1da1f2",
+    cursor: "pointer",
+    "&:hover": {
+      textDecoration: "underline"
+    }
   },
   toFollow: {
     display: "block",
@@ -35,7 +40,7 @@ export const styles = {
   },
   infoContainer: {
     paddingLeft: "24px",
-    display: "block"
+    position: "relative"
   },
   username: {
     fontSize: "14px",
@@ -60,5 +65,14 @@ export const styles = {
     padding: "6px 16px",
     cursor: "pointer",
     display: "block"
+  },
+  closeButton: {
+    position: "absolute",
+    top: "5%",
+    left: "93%",
+    color: "#ccd6dd",
+    fontSize: "20px",
+    lineHeight: "18px",
+    cursor: "pointer"
   }
 };

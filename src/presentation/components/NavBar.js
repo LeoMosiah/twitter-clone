@@ -34,7 +34,7 @@ function NavBar(props) {
             spacing={24}
             direction="row"
             alignItems="center"
-            justify="space-evenly"
+            justify="space-between"
           >
             <Grid item>
               <div className={classes.iconContainer}>
@@ -57,9 +57,7 @@ function NavBar(props) {
               </div>
             </Grid>
             <Grid item>
-              <div className={classes.logoContainer}>
-                <img className={classes.logoIcon} src={logo} alt="logo" />
-              </div>
+              <img className={classes.logoIcon} src={logo} alt="logo" />
             </Grid>
             <Grid item>
               <Avatar src={user.avatar} className={classes.accountIcon}>
