@@ -9,10 +9,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Avatar from "@material-ui/core/Avatar";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { styles } from "./styles/NavBar";
-import Typography from "@material-ui/core/es/Typography/Typography";
 import { ModalComponent } from "./Modal";
 import logo from "../assets/logo.png";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 
 function NavBar(props) {
   const {
