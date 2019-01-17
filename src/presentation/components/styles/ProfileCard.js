@@ -1,6 +1,8 @@
+import { sideColumnWidth } from "./spacing";
+
 export const styles = {
   container: {
-    width: "290px",
+    width: `${sideColumnWidth}px`,
     position: "relative",
     borderRadius: 0,
     marginRight: "10px",

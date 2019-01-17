@@ -1,8 +1,9 @@
+import { middleColumnWidth, sideColumnWidth } from "./spacing";
+
 export const styles = {
   container: {
     borderRadius: 0,
-    width: "700px",
-    marginRight: "10px"
+    width: `${middleColumnWidth}px`
   },
   header: {
     display: "flex",
@@ -20,7 +21,7 @@ export const styles = {
     width: "24px",
     height: "24px"
   },
-  icon:{
+  icon: {
     width: "inherit",
     height: "inherit"
   },

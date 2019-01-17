@@ -1,0 +1,313 @@
+From c20bfd298e794f186b4fe4e1bbb44bab2cdb0e02 Mon Sep 17 00:00:00 2001
+From: Eduardo Moroni <eduardomoroni@gmail.com>
+Date: Thu, 17 Jan 2019 20:32:38 +0100
+Subject: [PATCH] bla
+
+---
+ src/presentation/App.css                      |  8 ++-
+ src/presentation/components/Main.js           | 20 ++++---
+ src/presentation/components/NavBar.js         | 28 ++++-----
+ .../components/styles/FollowSugestionCard.js  |  4 +-
+ src/presentation/components/styles/Main.js    |  2 -
+ src/presentation/components/styles/NavBar.js  | 57 ++++++++++++++-----
+ .../components/styles/ProfileCard.js          |  5 +-
+ .../components/styles/Timeline.js             |  7 ++-
+ src/presentation/components/styles/spacing.js |  4 ++
+ 9 files changed, 86 insertions(+), 49 deletions(-)
+ create mode 100644 src/presentation/components/styles/spacing.js
+
+diff --git a/src/presentation/App.css b/src/presentation/App.css
+index 94f71d8..baccdc2 100644
+--- a/src/presentation/App.css
++++ b/src/presentation/App.css
+@@ -10,6 +10,7 @@ html,
+ body,
+ .react-app {
+   height: 100%;
++  background-color: #e6ecf0;
+ }
+ body {
+   margin: 0;
+@@ -31,6 +32,7 @@ body {
+   /* Microsoft Edge */
+   color: rgb(29, 161, 242);
+ }
+-textarea:focus, input:focus{
+-  outline: none
+-}
+\ No newline at end of file
++textarea:focus,
++input:focus {
++  outline: none;
++}
+diff --git a/src/presentation/components/Main.js b/src/presentation/components/Main.js
+index a7bdf45..0798ab5 100644
+--- a/src/presentation/components/Main.js
++++ b/src/presentation/components/Main.js
+@@ -5,21 +5,27 @@ import { styles } from "./styles/Main";
+ import { FollowSugestionCard } from "./FollowSugestionCard";
+ import { Timeline } from "../containers/Timeline";
+ import { ProfileCard } from "../containers/ProfileCard";
+-import Grid from '@material-ui/core/Grid';
++import Grid from "@material-ui/core/Grid";
++import { columnMargin } from "./styles/spacing";
+ 
+ function MainComponent({ classes }) {
+   return (
+     <Grid
+       className={classes.container}
+       container
+-      spacing={16}
+-      alignItems="flex-start"
++      spacing={columnMargin}
+       direction="row"
+-      justify="space-evenly"
++      justify="center"
+     >
+-      <ProfileCard />
+-      <Timeline />
+-      <FollowSugestionCard />
++      <Grid item>
++        <ProfileCard />
++      </Grid>
++      <Grid item>
++        <Timeline />
++      </Grid>
++      <Grid item>
++        <FollowSugestionCard />
++      </Grid>
+     </Grid>
+   );
+ }
+diff --git a/src/presentation/components/NavBar.js b/src/presentation/components/NavBar.js
+index f667375..bd7569f 100644
+--- a/src/presentation/components/NavBar.js
++++ b/src/presentation/components/NavBar.js
+@@ -27,16 +27,10 @@ function NavBar(props) {
+   } = props;
+   return (
+     <Fragment>
+-      <header className={classes.header}>
++      <div className={classes.header}>
+         <Toolbar className={classes.navBarContainer}>
+-          <Grid
+-            container
+-            spacing={24}
+-            direction="row"
+-            alignItems="center"
+-            justify="space-between"
+-          >
+-            <Grid item>
++          <Grid container className={classes.navBarContainer}>
++            <Grid item className={classes.leftContainer}>
+               <div className={classes.iconContainer}>
+                 <HomeOutlined />
+                 <Typography className={classes.iconName}>Home</Typography>
+@@ -56,20 +50,18 @@ function NavBar(props) {
+                 <Typography className={classes.iconName}>Messages</Typography>
+               </div>
+             </Grid>
+-            <Grid item>
++            <Grid item className={classes.middleContainer}>
+               <img className={classes.logoIcon} src={logo} alt="logo" />
+             </Grid>
+-            <Grid item>
+-                <Avatar src={user.avatar} className={classes.avatar}>
+-                  <AccountCircle className={classes.accountIcon} />
+-                </Avatar>
++            <Grid item className={classes.rightContainer}>
+               <input
+-                type="text"
++                type="search"
+                 placeholder="Search"
+                 className={classes.input}
+               />
+-            </Grid>
+-            <Grid item>
++              <Avatar src={user.avatar} className={classes.avatar}>
++                <AccountCircle className={classes.accountIcon} />
++              </Avatar>
+               <button
+                 className={classes.button}
+                 onClick={() => handleOpenModal()}
+@@ -79,7 +71,7 @@ function NavBar(props) {
+             </Grid>
+           </Grid>
+         </Toolbar>
+-      </header>
++      </div>
+       <ModalComponent
+         isModalOpen={isModalOpen}
+         handleCloseModal={handleCloseModal}
+diff --git a/src/presentation/components/styles/FollowSugestionCard.js b/src/presentation/components/styles/FollowSugestionCard.js
+index 48aa20f..95bcbfe 100644
+--- a/src/presentation/components/styles/FollowSugestionCard.js
++++ b/src/presentation/components/styles/FollowSugestionCard.js
+@@ -1,7 +1,9 @@
++import { sideColumnWidth } from "./spacing";
++
+ export const styles = {
+   container: {
+     borderRadius: 0,
+-    width: "290px"
++    width: `${sideColumnWidth}px`
+   },
+   header: {
+     padding: "10px"
+diff --git a/src/presentation/components/styles/Main.js b/src/presentation/components/styles/Main.js
+index f15e33a..e94b931 100644
+--- a/src/presentation/components/styles/Main.js
++++ b/src/presentation/components/styles/Main.js
+@@ -1,7 +1,5 @@
+ export const styles = {
+   container: {
+-    height: "100vh",
+-    backgroundColor: "#e6ecf0",
+     flexWrap: "nowrap"
+   }
+ };
+diff --git a/src/presentation/components/styles/NavBar.js b/src/presentation/components/styles/NavBar.js
+index db97285..6b1cbe0 100644
+--- a/src/presentation/components/styles/NavBar.js
++++ b/src/presentation/components/styles/NavBar.js
+@@ -1,11 +1,36 @@
++import {
++  columnMargin,
++  middleColumnWidth,
++  navBarHeight,
++  sideColumnWidth
++} from "./spacing";
++
++const logoSize = 30;
++
+ export const styles = {
+   header: {
+     position: "static",
+-    color: "inherit"
++    backgroundColor: "#fff",
++    borderBottom: "1px solid rgba(0,0,0,0.05)",
++    display: "flex",
++    marginBottom: "16px",
++    top: 0,
++    right: 0,
++    left: 0,
++    zIndex: 1000,
++    alignItems: "center",
++    justifyContent: "center",
++    boxShadow: "8px -4px 9px rgba(0,0,0,0.05)"
+   },
+   navBarContainer: {
+-    position: "relative",
+-    minHeight: "48px"
++    display: "flex",
++    alignItems: "center",
++    justifyContent: "space-between",
++    height: `${navBarHeight}px`,
++    minHeight: `${navBarHeight}px`,
++    width: `${columnMargin * 2 + sideColumnWidth * 2 + middleColumnWidth}px`,
++    margin: 0,
++    padding: 0
+   },
+   button: {
+     color: "#fff",
+@@ -17,8 +42,7 @@ export const styles = {
+     fontWeight: "bold",
+     lineHeight: "20px",
+     padding: "6px 16px",
+-    cursor: "pointer",
+-    marginBottom: "7px"
++    cursor: "pointer"
+   },
+   iconContainer: {
+     marginRight: "20px",
+@@ -35,10 +59,20 @@ export const styles = {
+     color: "inherit"
+   },
+   logoIcon: {
+-    width: "30px",
+-    height: "30px"
++    width: `${logoSize}px`,
++    height: `${logoSize}px`
++  },
++  rightContainer: {
++    display: "flex",
++    alignItems: "center"
+   },
+-  avatar:{
++  leftContainer: {},
++  middleContainer: {
++    position: "absolute",
++    left: "50%",
++    top: `${navBarHeight / 2 - logoSize / 2}px`
++  },
++  avatar: {
+     display: "inline-block",
+     height: "30px",
+     width: "30px",
+@@ -58,9 +92,6 @@ export const styles = {
+     lineHeight: "16px",
+     paddingLeft: "10px",
+     fontSize: "12px",
+-    position: "relative",
+-    top: "50%",
+-    left: "50%",
+-    transform: "translate(-50%, -30%)"
+-  },
++    position: "relative"
++  }
+ };
+diff --git a/src/presentation/components/styles/ProfileCard.js b/src/presentation/components/styles/ProfileCard.js
+index 439361e..283e2eb 100644
+--- a/src/presentation/components/styles/ProfileCard.js
++++ b/src/presentation/components/styles/ProfileCard.js
+@@ -1,9 +1,10 @@
++import { sideColumnWidth } from "./spacing";
++
+ export const styles = {
+   container: {
+-    width: "290px",
++    width: `${sideColumnWidth}px`,
+     position: "relative",
+     borderRadius: 0,
+-    marginRight: "10px",
+     paddingBottom: "20px"
+   },
+   cover: {
+diff --git a/src/presentation/components/styles/Timeline.js b/src/presentation/components/styles/Timeline.js
+index 35d2a0c..0de0222 100644
+--- a/src/presentation/components/styles/Timeline.js
++++ b/src/presentation/components/styles/Timeline.js
+@@ -1,8 +1,9 @@
++import { middleColumnWidth, sideColumnWidth } from "./spacing";
++
+ export const styles = {
+   container: {
+     borderRadius: 0,
+-    width: "700px",
+-    marginRight: "10px"
++    width: `${middleColumnWidth}px`
+   },
+   header: {
+     display: "flex",
+@@ -20,7 +21,7 @@ export const styles = {
+     width: "24px",
+     height: "24px"
+   },
+-  icon:{
++  icon: {
+     width: "inherit",
+     height: "inherit"
+   },
+diff --git a/src/presentation/components/styles/spacing.js b/src/presentation/components/styles/spacing.js
+new file mode 100644
+index 0000000..c57a400
+--- /dev/null
++++ b/src/presentation/components/styles/spacing.js
+@@ -0,0 +1,4 @@
++export const sideColumnWidth = 290;
++export const middleColumnWidth = 700;
++export const navBarHeight = 48;
++export const columnMargin = 8;
+-- 
+2.17.2 (Apple Git-113)
+

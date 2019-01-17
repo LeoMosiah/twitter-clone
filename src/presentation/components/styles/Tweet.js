@@ -5,34 +5,44 @@ export const styles = {
     paddingBottom: 5,
     display: "flex"
   },
-  leftColumn:{
+  leftColumn: {
     flex: 1,
-    position:"relative"
+    position: "relative"
   },
   avatar: {
     position: "absolute",
-    top:"50%",
-    left:"50%",
+    top: "50%",
+    left: "50%",
     transform: "translate(-50%,-50%)"
   },
-  rightColumn:{
-    flex: 5
+  rightColumn: {
+    flex: 10
   },
   tweetInfo: {
     display: "inline-flex"
   },
-  author:{
-    marginRight: "50px"
+  author: {
+    marginRight: "10px",
+    fontSize: "14px",
+    fontWeight: "bold"
   },
-  handle:{
-    marginRight: "50px"
+  handle: {
+    marginRight: "10px",
+    lineHeight: "20px",
+    fontSize: "14px",
+    color: "#657786"
   },
-  timestamp:{
-
+  timestamp: {
+    lineHeight: "20px",
+    fontSize: "14px",
+    color: "#657786"
   },
-  body:{
+  body: {
+    fontSize: "14px",
+    lineHeight: "20px",
+    color: "#14171a"
   },
-  icons:{
-    display: "inline-flex",
+  icons: {
+    display: "inline-flex"
   }
 };

@@ -5,17 +5,17 @@ import { styles } from "./styles/Main";
 import { FollowSugestionCard } from "./FollowSugestionCard";
 import { Timeline } from "../containers/Timeline";
 import { ProfileCard } from "../containers/ProfileCard";
-import Grid from '@material-ui/core/Grid';
+import Grid from "@material-ui/core/Grid";
+import { columnMargin } from "./styles/spacing";
 
 function MainComponent({ classes }) {
   return (
     <Grid
       className={classes.container}
       container
-      spacing={16}
-      alignItems="flex-start"
       direction="row"
-      justify="space-evenly"
+      spacing={columnMargin}
+      justify="center"
     >
       <Grid item>
         <ProfileCard />

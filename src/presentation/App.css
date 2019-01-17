@@ -10,6 +10,7 @@ html,
 body,
 .react-app {
   height: 100%;
+  background-color: #e6ecf0;
 }
 body {
   margin: 0;
@@ -31,6 +32,7 @@ body {
   /* Microsoft Edge */
   color: rgb(29, 161, 242);
 }
-textarea:focus, input:focus{
-  outline: none
+textarea:focus,
+input:focus {
+  outline: none;
 }

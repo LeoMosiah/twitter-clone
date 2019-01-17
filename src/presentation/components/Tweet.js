@@ -20,11 +20,15 @@ function TweetComponent({ author, body, timestamp, classes, avatar }) {
       <div className={classes.rightColumn}>
         <div className={classes.tweetInfo}>
           <Typography className={classes.author}>{author}</Typography>
-          <Typography className={classes.handle}>{`@${author.toLowerCase()}`}</Typography>
-          <Typography className={classes.timestamp}>{formateTimestamp(timestamp)}</Typography>
+          <Typography
+            className={classes.handle}
+          >{`@${author.toLowerCase()}`}</Typography>
+          <Typography className={classes.timestamp}>
+            {formateTimestamp(timestamp)}
+          </Typography>
         </div>
-        <div className={classes.body}>
-          <Typography>{body}</Typography>
+        <div>
+          <Typography className={classes.body}>{body}</Typography>
         </div>
         <div className={classes.icons}>
           <ModeCommentOutlined cursor="pointer" />

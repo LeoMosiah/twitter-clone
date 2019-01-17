@@ -27,16 +27,10 @@ function NavBar(props) {
   } = props;
   return (
     <Fragment>
-      <header className={classes.header}>
+      <div className={classes.header}>
         <Toolbar className={classes.navBarContainer}>
-          <Grid
-            container
-            spacing={24}
-            direction="row"
-            alignItems="center"
-            justify="space-between"
-          >
-            <Grid item>
+          <Grid container className={classes.navBarContainer}>
+            <Grid item className={classes.leftContainer}>
               <div className={classes.iconContainer}>
                 <HomeOutlined />
                 <Typography className={classes.iconName}>Home</Typography>
@@ -56,20 +50,18 @@ function NavBar(props) {
                 <Typography className={classes.iconName}>Messages</Typography>
               </div>
             </Grid>
-            <Grid item>
+            <Grid item className={classes.middleContainer}>
               <img className={classes.logoIcon} src={logo} alt="logo" />
             </Grid>
-            <Grid item>
-                <Avatar src={user.avatar} className={classes.avatar}>
-                  <AccountCircle className={classes.accountIcon} />
-                </Avatar>
+            <Grid item className={classes.rightContainer}>
               <input
-                type="text"
+                type="search"
                 placeholder="Search"
                 className={classes.input}
               />
-            </Grid>
-            <Grid item>
+              <Avatar src={user.avatar} className={classes.avatar}>
+                <AccountCircle className={classes.accountIcon} />
+              </Avatar>
               <button
                 className={classes.button}
                 onClick={() => handleOpenModal()}
@@ -79,7 +71,7 @@ function NavBar(props) {
             </Grid>
           </Grid>
         </Toolbar>
-      </header>
+      </div>
       <ModalComponent
         isModalOpen={isModalOpen}
         handleCloseModal={handleCloseModal}
