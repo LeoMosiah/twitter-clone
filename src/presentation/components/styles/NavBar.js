@@ -7,11 +7,6 @@ export const styles = {
     position: "relative",
     minHeight: "55px"
   },
-  accountIcon: {
-    color: "inherit",
-    backgroundColor: "transparent",
-    display: "inline-flex"
-  },
   button: {
     color: "#fff",
     backgroundColor: "#4AB3F4",
@@ -55,5 +50,19 @@ export const styles = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%,-50%)"
+  },
+  avatarContainer:{
+    height:"40px",
+    width: "40px"
+  },
+  avatar:{
+    height:"40px",
+    width: "40px"
+  },
+  accountIcon: {
+    color: "inherit",
+    backgroundColor: "transparent",
+    height:"40px",
+    width: "40px"
   }
 };

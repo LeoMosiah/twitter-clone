@@ -12,6 +12,7 @@ import { ModalComponent } from "./Modal";
 import logo from "../assets/logo.png";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 
 function NavBar(props) {
   const {
@@ -59,8 +60,11 @@ function NavBar(props) {
               <img className={classes.logoIcon} src={logo} alt="logo" />
             </Grid>
             <Grid item>
-              <Avatar src={user.avatar} className={classes.accountIcon}>
-              </Avatar>
+              <div className={classes.avatarContainer}>
+                <Avatar src={user.avatar} className={classes.avatar}>
+                  <AccountCircle className={classes.accountIcon} />
+                </Avatar>
+              </div>
               <input
                 type="text"
                 placeholder="Search"
