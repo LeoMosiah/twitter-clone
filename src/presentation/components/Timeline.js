@@ -14,7 +14,7 @@ function Timeline({ classes, tweets, handleSubmit, body, handleChange, user }) {
       <Card className={classes.container}>
         <div className={classes.header}>
           <Avatar src={user.avatar} className={classes.avatar}>
-            <AccountCircle />
+            <AccountCircle className={classes.icon} />
           </Avatar>
           <input
             type="text"

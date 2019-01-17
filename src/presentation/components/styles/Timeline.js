@@ -20,6 +20,10 @@ export const styles = {
     width: "24px",
     height: "24px"
   },
+  icon:{
+    width: "inherit",
+    height: "inherit"
+  },
   form: {
     paddingLeft: 10,
     width: "100%",
