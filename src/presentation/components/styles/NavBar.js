@@ -39,6 +39,8 @@ export const styles = {
   },
   avatar:{
     display: "inline-block",
+    height: "30px",
+    width: "30px"
   },
   accountIcon: {
     color: "inherit",
@@ -56,6 +58,6 @@ export const styles = {
     position: "relative",
     top: "50%",
     left: "50%",
-    transform: "translate (-50%, -50%)"
+    transform: "translate(-50%, -50%)"
   },
 };
