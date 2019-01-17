@@ -31,3 +31,6 @@ body {
   /* Microsoft Edge */
   color: rgb(29, 161, 242);
 }
+textarea:focus, input:focus{
+  outline: none
+}

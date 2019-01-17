@@ -11,20 +11,22 @@ import ModeCommentOutlined from "@material-ui/icons/ModeCommentOutlined";
 
 function TweetComponent({ author, body, timestamp, classes, avatar }) {
   return (
-    <Card className={classes.tweetCard}>
-      <Avatar src={avatar} className={classes.tweetCardAvatar}>
-        {author[0]}
-      </Avatar>
-      <div className={classes.tweetCardInfo}>
-        <div className={classes.tweetCardHeader}>
+    <Card className={classes.cardContainer}>
+      <div className={classes.leftColumn}>
+        <Avatar src={avatar} className={classes.avatar}>
+          {author[0]}
+        </Avatar>
+      </div>
+      <div className={classes.rightColumn}>
+        <div className={classes.tweetInfo}>
           <Typography>{author}</Typography>
           <Typography>{`@${author.toLowerCase()}`}</Typography>
           <Typography>{formateTimestamp(timestamp)}</Typography>
         </div>
-        <div className={classes.tweetCardBoby}>
+        <div className={classes.body}>
           <Typography>{body}</Typography>
         </div>
-        <div className={classes.tweetCardFooter}>
+        <div>
           <ModeCommentOutlined cursor="pointer" />
           <FavoriteBorderOutlined cursor="pointer" />
         </div>
