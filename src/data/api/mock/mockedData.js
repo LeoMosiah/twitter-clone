@@ -2,19 +2,19 @@ export const mockedTweets = {
   "id 1": {
     id: "id 1",
     author: "LeoMosiah",
-    body: "body 1",
+    body: " Non arcu risus quis varius. Integer vitae justo eget magna fermentum.",
     timestamp: Date.now()
   },
   "id 2": {
     id: "id 2",
     author: "LeoMosiah",
-    body: "body 2",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac orci phasellus egestas tellus rutrum tellus.",
     timestamp: Date.now()
   },
   "id 3": {
     id: "id 3",
     author: "LeoMosiah",
-    body: "body 3",
+    body: "Odio eu feugiat pretium nibh ipsum consequat. ",
     timestamp: Date.now()
   }
 };
