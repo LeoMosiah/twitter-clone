@@ -5,6 +5,7 @@ export const styles = {
   },
   navBarContainer: {
     position: "relative",
+    minHeight: "48px"
   },
   button: {
     color: "#fff",
@@ -58,6 +59,6 @@ export const styles = {
     position: "relative",
     top: "50%",
     left: "50%",
-    transform: "translate(-50%, -50%)"
+    transform: "translate(-50%, -30%)"
   },
 };
