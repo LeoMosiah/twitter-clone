@@ -49,6 +49,7 @@ export const styles = {
     backgroundColor: "#f5f8fa",
     height: "32px",
     lineHeight: "16px",
+    paddingLeft: "10px",
     fontSize: "12px",
     position: "relative",
     top: "50%",
