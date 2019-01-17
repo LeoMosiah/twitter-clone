@@ -6,22 +6,16 @@ export const styles = {
     display: "flex"
   },
   leftColumn:{
-    flex: 0,
-    position: "relative"
+    flex: 1,
   },
   avatar: {
-    position: "absolute",
-    top:"50%",
-    left:"50%",
-    transform: "translate(-50%, -50%)"
+    margin: "0 auto"
   },
   rightColumn:{
-    flex: 2
+    flex: 3
   },
   tweetInfo: {
-    display: "inline-flex"
   },
   body:{
-    whiteSpace: "nowrap"
   }
 };
