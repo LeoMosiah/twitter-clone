@@ -1,6 +1,6 @@
 # twitter-clone
 
-This project simulates the main page of the twitter website in it the user should be able to view their tweets, write new tweets, change their username, profile image and cover image. All the data in this project are treated locally, motions being intentions with api's.
+This project simulates the main page of the twitter website in it the user should be able to view their tweets, write new tweets, change their username, profile image and cover image. All the data in this project are treated locally, motions being intentions with api's. By lack of time this project was not built with an responsive design it does not support mobile devices. 
 
 ## Architecture
 
@@ -36,7 +36,7 @@ npm start
 
 ## Test
 
-All tests were made using cypress framework, after executing the command run all tests available.
+All tests are related to redux, run all tests executing the command.
 
 ```javascript
 npm test
