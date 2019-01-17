@@ -1,6 +1,7 @@
 import { call, put } from "redux-saga/effects";
 import { getTweets } from "../../../data/api/api";
 import { receiveTweetsAction } from "../ducks/tweetsReducer";
+import { parseTweets } from '../../useCases/tweets';
 
 export const GET_TWEETS = "saga/getTweets";
 
@@ -10,8 +11,9 @@ export const getTweetsAction = () => ({
 
 export function* getTweetsSaga() {
   try {
-    const tweets = yield call(getTweets);
-    yield put(receiveTweetsAction(tweets));
+    const tweetsObject = yield call(getTweets);
+    const tweetsEntities = parseTweets(tweetsObject);
+    yield put(receiveTweetsAction(tweetsEntities));
   } catch (error) {
     console.log(error);
   }

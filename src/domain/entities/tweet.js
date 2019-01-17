@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
 export class Tweet {
-  constructor(author, body) {
+  constructor(author, body, timestamp = Date.now(), id = Date.now() ) {
     this.author = author;
     this.body = body;
-    this.timestamp = Date.now();
-    this.id = Date.now();
+    this.timestamp = timestamp;
+    this.id = id;
   }
   static propTypes = PropTypes.shape({
     author: PropTypes.string.isRequired,

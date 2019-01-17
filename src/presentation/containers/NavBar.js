@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getNewTweet } from "../../domain/useCases/tweet";
+import { getNewTweet } from "../../domain/useCases/tweets";
 import { NavBarComponent } from "../components/NavBar";
 import {
   addTweetAction,
