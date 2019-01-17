@@ -46,8 +46,6 @@ export const styles = {
     paddingLeft: "10px",
     fontSize: "12px",
   },
-  avatarContainer:{
-  },
   avatar:{
   },
   accountIcon: {
