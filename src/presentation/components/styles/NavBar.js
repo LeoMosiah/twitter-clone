@@ -66,6 +66,7 @@ export const styles = {
     display: "flex",
     alignItems: "center"
   },
+  leftContainer: {},
   middleContainer: {
     position: "absolute",
     left: "50%",
