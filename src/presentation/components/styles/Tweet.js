@@ -19,7 +19,12 @@ export const styles = {
     flex: 5
   },
   tweetInfo: {
+    display: "inline-flex"
   },
   body:{
+  },
+  icons:{
+    display: "inline-flex",
+    justifyContent: "space-between"
   }
 };

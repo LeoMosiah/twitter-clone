@@ -26,7 +26,7 @@ function TweetComponent({ author, body, timestamp, classes, avatar }) {
         <div className={classes.body}>
           <Typography>{body}</Typography>
         </div>
-        <div>
+        <div className={classes.icons}>
           <ModeCommentOutlined cursor="pointer" />
           <FavoriteBorderOutlined cursor="pointer" />
         </div>
