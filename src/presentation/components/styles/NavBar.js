@@ -3,7 +3,7 @@ import {
   middleColumnWidth,
   navBarHeight,
   sideColumnWidth
-} from "./spacing";
+} from "./Spacing";
 
 const logoSize = 30;
 
@@ -77,7 +77,8 @@ export const styles = {
     height: "30px",
     width: "30px",
     backgroundColor: "#fff",
-    color: "#000"
+    color: "#000",
+    marginRight: "10px"
   },
   accountIcon: {
     color: "inherit",
@@ -91,6 +92,7 @@ export const styles = {
     height: "32px",
     lineHeight: "16px",
     paddingLeft: "10px",
-    fontSize: "12px"
+    fontSize: "12px",
+    marginRight: "10px"
   }
 };

@@ -1,4 +1,4 @@
-import { middleColumnWidth, sideColumnWidth } from "./spacing";
+import { middleColumnWidth } from "./Spacing";
 
 export const styles = {
   container: {

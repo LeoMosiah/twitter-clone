@@ -6,7 +6,7 @@ import { FollowSugestionCard } from "./FollowSugestionCard";
 import { Timeline } from "../containers/Timeline";
 import { ProfileCard } from "../containers/ProfileCard";
 import Grid from "@material-ui/core/Grid";
-import { columnMargin } from "./styles/spacing";
+import { columnMargin } from "./styles/Spacing";
 
 function MainComponent({ classes }) {
   return (

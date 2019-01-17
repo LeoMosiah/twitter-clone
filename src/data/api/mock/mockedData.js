@@ -1,21 +1,24 @@
 export const mockedTweets = {
   "id 1": {
     id: "id 1",
-    author: "LeoMosiah",
-    body: " Non arcu risus quis varius. Integer vitae justo eget magna fermentum.",
-    timestamp: Date.now()
+    author: "matheus mordorst",
+    body:
+      "I just got Free Instagram Followers on http://followmyprofile.com/free-instagram-followers/ … #Instgramfollowers",
+    timestamp: 1509537600
   },
   "id 2": {
     id: "id 2",
-    author: "LeoMosiah",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac orci phasellus egestas tellus rutrum tellus.",
-    timestamp: Date.now()
+    author: "Eduardo Moroni",
+    body:
+      "Verifying myself: I am eduardomoroni on http://Keybase.io . 1H3MdRz9kGb4cOVQ6YU3isXXbcUmLYfXgl2W / https://keybase.io/eduardomoroni/sigs/1H3MdRz9kGb4cOVQ6YU3isXXbcUmLYfXgl2W …",
+    timestamp: 1527595200
   },
   "id 3": {
     id: "id 3",
-    author: "LeoMosiah",
-    body: "Odio eu feugiat pretium nibh ipsum consequat. ",
-    timestamp: Date.now()
+    author: "Marvel",
+    body:
+      '"Are you going to step up or not?" Watch the #SpiderManFarFromHome teaser trailer now! 7.5.19 🕷️',
+    timestamp: 1547575200
   }
 };
 
@@ -25,5 +28,5 @@ export const mockedUser = {
   followers: 8,
   following: 25,
   cover: "",
-  avatar:""
+  avatar: ""
 };
