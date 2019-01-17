@@ -17,9 +17,15 @@ function MainComponent({ classes }) {
       direction="row"
       justify="space-evenly"
     >
-      <ProfileCard />
-      <Timeline />
-      <FollowSugestionCard />
+      <Grid item>
+        <ProfileCard />
+      </Grid>
+      <Grid item>
+        <Timeline />
+      </Grid>
+      <Grid item>
+        <FollowSugestionCard />
+      </Grid>
     </Grid>
   );
 }
