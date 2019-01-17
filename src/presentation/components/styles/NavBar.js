@@ -91,10 +91,6 @@ export const styles = {
     height: "32px",
     lineHeight: "16px",
     paddingLeft: "10px",
-    fontSize: "12px",
-    position: "relative",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -30%)"
+    fontSize: "12px"
   }
 };
