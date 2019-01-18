@@ -19,9 +19,9 @@ class TimelineContainer extends Component {
     const user = this.props.user;
     const newTweet = getNewTweet(user.username, body);
     this.props.addTweet(newTweet);
-    this.setState(() => ({
+    this.setState({
       body: ""
-    }));
+    })
   };
   render() {
     const { body } = this.state;
