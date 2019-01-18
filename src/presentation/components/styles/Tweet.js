@@ -22,12 +22,12 @@ export const styles = {
     display: "inline-flex"
   },
   author: {
-    marginRight: "10px",
+    marginRight: "5px",
     fontSize: "14px",
     fontWeight: "bold"
   },
   handle: {
-    marginRight: "10px",
+    marginRight: "5px",
     lineHeight: "20px",
     fontSize: "14px",
     color: "#657786"
@@ -47,9 +47,5 @@ export const styles = {
   },
   commentIcon: {
     marginRight: "100px"
-  },
-  favoriteIcon: {
-    color: "pink",
-    marginLeft: "100px"
   }
 };
