@@ -7,7 +7,6 @@ import Avatar from "@material-ui/core/Avatar";
 
 function NewTweetComponent({
   classes,
-  tweets,
   handleSubmit,
   body,
   handleChange,
@@ -42,8 +41,7 @@ NewTweetComponent.propTypes = {
   classes: PropTypes.object.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  tweets: PropTypes.object.isRequired,
-  user: PropTypes.string.isRequired
+  user: PropTypes.object.isRequired
 };
 
 export const NewTweet = withStyles(styles)(NewTweetComponent);
