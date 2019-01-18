@@ -43,7 +43,8 @@ export const styles = {
     color: "#14171a"
   },
   icons: {
-    display: "inline-flex"
+    display: "inline-flex",
+    marginTop: "5px"
   },
   commentIcon: {
     marginRight: "100px"

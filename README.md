@@ -10,7 +10,7 @@ The modules of this project were made based on the concepts of clean architectur
 
 ### Data Access Layer (data):
 
-The data layer is responsible for connecting the application to the outside world, all data that is accessed from the outside of the application or oblivion outside the application passes here. In this project this layer was built using the firebase.
+The data layer is responsible for connecting the application to the outside world, all data that is accessed from the outside of the application or oblivion outside the application passes here. In this project all data are mocked so i'm using firebase initialization only simulate how it would work if the project was using firebase services.
 
 ### Business Logic Layer(domain):
 
