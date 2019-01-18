@@ -10,7 +10,8 @@ export const parseTweets = tweets => {
         tweet.body,
         tweet.timestamp,
         tweet.id,
-        tweet.avatar
+        tweet.avatar,
+        tweet.handle
       )
   );
   return Object.assign(

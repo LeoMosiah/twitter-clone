@@ -9,7 +9,7 @@ import { formateTimestamp } from "../../domain/useCases/dateControler";
 import FavoriteBorderOutlined from "@material-ui/icons/FavoriteBorderOutlined";
 import ModeCommentOutlined from "@material-ui/icons/ModeCommentOutlined";
 
-function TweetComponent({ author, body, timestamp, classes, avatar }) {
+function TweetComponent({ author, body, timestamp, classes, avatar, handle }) {
   return (
     <Card className={classes.cardContainer}>
       <div className={classes.leftColumn}>
@@ -20,9 +20,7 @@ function TweetComponent({ author, body, timestamp, classes, avatar }) {
       <div className={classes.rightColumn}>
         <div className={classes.tweetInfo}>
           <Typography className={classes.author}>{author}</Typography>
-          <Typography
-            className={classes.handle}
-          >{`@${author.toLowerCase()}`}</Typography>
+          <Typography className={classes.handle}>{handle}</Typography>
           <Typography className={classes.timestamp}>
             {formateTimestamp(timestamp)}
           </Typography>

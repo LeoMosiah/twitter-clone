@@ -22,6 +22,7 @@ function Timeline({ classes, tweets, handleSubmit, body, handleChange, user }) {
           author={tweet.author}
           timestamp={tweet.timestamp}
           avatar={tweet.avatar}
+          handle={tweet.handle}
         />
       ))}
     </Card>

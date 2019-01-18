@@ -6,13 +6,15 @@ export class Tweet {
     body,
     timestamp = Date.now(),
     id = Date.now(),
-    avatar = ""
+    avatar = "",
+    handle
   ) {
     this.author = author;
     this.body = body;
     this.timestamp = timestamp;
     this.id = id;
     this.avatar = avatar;
+    this.handle = handle;
   }
   static propTypes = PropTypes.shape({
     author: PropTypes.string.isRequired,
