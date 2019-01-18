@@ -31,8 +31,14 @@ function TweetComponent({ author, body, timestamp, classes, avatar }) {
           <Typography className={classes.body}>{body}</Typography>
         </div>
         <div className={classes.icons}>
-          <ModeCommentOutlined cursor="pointer" />
-          <FavoriteBorderOutlined cursor="pointer" />
+          <ModeCommentOutlined
+            className={classes.commentIcon}
+            cursor="pointer"
+          />
+          <FavoriteBorderOutlined
+            className={classes.favoriteIcon}
+            cursor="pointer"
+          />
         </div>
       </div>
     </Card>

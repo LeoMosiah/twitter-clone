@@ -44,5 +44,12 @@ export const styles = {
   },
   icons: {
     display: "inline-flex"
+  },
+  commentIcon: {
+    marginRight: "100px"
+  },
+  favoriteIcon: {
+    color: "pink",
+    marginLeft: "100px"
   }
 };

@@ -39,8 +39,10 @@ class TimelineContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  tweets: tweetsSelector(state),
-  user: userSelector(state)
+  user: userSelector(state),
+  tweets: Object.values(tweetsSelector(state)).sort(
+    (a, b) => b.timestamp - a.timestamp
+  )
 });
 
 const mapDispatchToProps = {

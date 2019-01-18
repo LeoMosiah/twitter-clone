@@ -6,16 +6,15 @@ export const mockedTweets = {
       "https://firebasestorage.googleapis.com/v0/b/leitura-26bcd.appspot.com/o/matheusmordorst.jpg?alt=media&token=c2cbca21-f997-4afc-8926-8e8581f941d9",
     body:
       "I just got Free Instagram Followers on http://followmyprofile.com/free-instagram-followers/ … #Instgramfollowers",
-    timestamp: 1509537600
+    timestamp: 1509501600000
   },
   id_2: {
     id: "id 2",
     author: "EduardoMoroni",
     avatar:
       "https://firebasestorage.googleapis.com/v0/b/leitura-26bcd.appspot.com/o/eduardomoroni.jpg?alt=media&token=dbc4777c-2f02-4be3-b30d-bc3ade69e556",
-    body:
-      "Verifying myself: I am eduardomoroni on http://Keybase.io . 1H3MdRz9kGb4cOVQ6YU3isXXbcUmLYfXgl2W / https://keybase.io/eduardomoroni/sigs/1H3MdRz9kGb4cOVQ6YU3isXXbcUmLYfXgl2W …",
-    timestamp: 1527595200
+    body: "I just published “Arquitetura limpa para bases de código React”",
+    timestamp: 1529982000000
   },
   id_3: {
     id: "id_3",
@@ -24,7 +23,7 @@ export const mockedTweets = {
       "https://firebasestorage.googleapis.com/v0/b/leitura-26bcd.appspot.com/o/marvel.jpeg?alt=media&token=e5f4b731-4ed2-49ed-b56e-c37ab9ae2558",
     body:
       '"Are you going to step up or not?" Watch the #SpiderManFarFromHome teaser trailer now! 7.5.19 🕷️',
-    timestamp: 1547575200
+    timestamp: 1547517600000
   },
   id_4: {
     id: "id_4",
@@ -82,7 +81,7 @@ export const mockedTweets = {
     avatar:
       "https://firebasestorage.googleapis.com/v0/b/leitura-26bcd.appspot.com/o/gordonb.jpg?alt=media&token=f6c7700f-f7a2-4394-a5dd-91801546f7c9",
     body:
-      "ur constant self-improvement will become as a polar star to those within our individual spheres of influence. They will remember longer what they saw in us than what they heard from us.",
+      "Our constant self-improvement will become as a polar star to those within our individual spheres of influence. They will remember longer what they saw in us than what they heard from us.",
     timestamp: 1330210800000
   },
   id_11: {
