@@ -23,6 +23,7 @@ function NewTweetComponent({
         <input
           type="text"
           placeholder="O que está acontecendo?"
+          value={body}
           className={classes.form}
           onChange={event => handleChange(event.target.value)}
         />
