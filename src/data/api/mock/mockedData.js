@@ -35,7 +35,7 @@ export const mockedTweets = {
     avatar:
       "https://firebasestorage.googleapis.com/v0/b/leitura-26bcd.appspot.com/o/dan_abramov.jpg?alt=media&token=fa00a354-b813-47f8-88db-0fe074d497bd",
     body: "Nobody wants to help test this?",
-    timestamp: 1515969090
+    timestamp: 1515969090000
   },
   id_5: {
     id: "id_5",
