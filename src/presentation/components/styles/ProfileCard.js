@@ -58,7 +58,8 @@ export const styles = {
     color: "#14171a",
     fontSize: 18,
     lineHeight: "25px",
-    display: "block"
+    display: "block",
+    cursor: "pointer"
   },
   handle: {
     textDecoration: "none",
